@@ -1,3 +1,7 @@
+trackchanges-0.7.0/*
+trackchanges*
+*.DS_store
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
