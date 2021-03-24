@@ -51,6 +51,8 @@
 	Ocean eddies influence regional and global climate through mixing and transport of heat and properties. 
 	One of the most recognizable and ubiquitous feature of oceanic eddies are vortices with spatial scales of tens to hundreds of kilometers, frequently referred as ``mesoscale eddies" or ``coherent eddies". 
 	Coherent eddies are known to transport properties across the ocean and to locally affect near-surface wind, cloud properties and rainfall patterns. Although coherent eddies are ubiquitous, yet their climatology, seasonality and long-term temporal evolution remains poorly understood. 
+	
+	
 	Thus, we examine the kinetic energy contained by coherent eddies and we present the annual, interannual, and long-term changes of automatically identified coherent eddies from satellite observations and a state of the art numerical simulation from 1993 to 2018. 
 	Satellite observations show that around 40\% of the kinetic energy contained by ocean eddies corresponds to coherent eddies. 
 	Additionally, a strong hemispherical seasonal cycle is observed, on top of a 3--6 months lag between the wind forcing and the response of the coherent eddy field. 
@@ -107,10 +109,16 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 % %	
 % %	
 	\subsection{Data}
+	We use daily sea surface height (SSH) data are available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. This gridded product contains the sea surface height and geostrophic velocities with daily 0.25$^\circ$ resolution from January 1993 to 2019. The daily geostrophic velocities allowed us to compute the $\KE$ and $\EKE$ over the satellite records. Mean and anomaly velocities are in  in reference to the full record mean of SSH (1993–2019), while all presented climatologies correspond to the mean of the full record.
 	
+	Over the same record, we use a mesoscale coherent eddy trajectory dataset released by Chelton and Schlax (2013) to compare global statistics of coherent eddies in the present study. This dataset was produced via an automated eddy identification developed by \citet{Chelton_The_2011}. 
+	
+	The eddy identification procedure defines mesoscale eddies directly using the sea surface height (SSH) ﬁeld. This method was applied to avoid noise amplification in the SSH ﬁeld. Compared with the Okubo–Weiss parameter identification procedure, the SSH-based procedure without the differentiation calculation of the SSH ﬁeld effectively solves the overestimation issue of eddy identification with less computational load. The dataset retains only those eddies with lifetimes of four weeks or longer and provides trajectories with 7-day time steps 
+
+	Wind stress averaged over oceanic regions between 45S and 65S calculated from the ERA interim reanalysis [Dee et al., 2011] (Figure 1b, black line) correlates well with the annually averaged SAM (correlation 0.88). Wind stress increases from 1990 onward at a rate consistent with the long-term trend (not shown) albeit masked by strong levels of interannual variability. We also show how the ERA-interim wind stress has varied within each ocean basin (Figure 1c). For this, we divide the Southern Ocean up into the three sectors similar to those used by MH06 (Indian Ocean: 40E–150E, 57S–44S; Paciﬁc Ocean: 150E–288E, 62S–48S; and Atlantic Ocean: 325E–10E, 56S–46S). The regional analysis indicates that the long-term trend in Southern Ocean wind stress is dominated by changes in the Paciﬁc sector.
 
 	\subsection{Coherent eddy identification algorithm}
-
+	TrackEddy is an autonomous eddy identification, tracking, and reconstruction algorithm, which assumes eddies can be represented as isolated anisotropic Gaussian anomalies. The main and unique characteristic of the TrackEddy algorithm, which differs from previous algorithms (Ashkezari et al., 2016; Chelton et al., 2007; Faghmous et al., 2015), is its capability to reconstruct an optimal Gaussian anomaly for each identified eddy. This Gaussian anomaly can be used to reconstruct the eddy velocities to calculate the TKE associated with the identified coherent eddies. TrackEddy follows a similar work‐ﬂow to previous methods using SSH. It starts with a single snapshot of SSHa, where potential eddies are isolated using study‐speciﬁc criteria. Generally, each study describes a strict definition of what will be considered an eddy by constraining their size and/or shape. Then, the algorithm iterates at multiple discrete SSHa levels in which the coherent eddy definition is used to identify eddies. The identification algorithm at each discrete SSHa level is then applied to all time steps for which data are available. The following subsections present the TrackEddy algorithm structure, criteria, user‐specified values, and energy calculation.
 
 	\subsection{Kinetic Energy decomposition}
 
@@ -135,10 +143,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 % %	
 % %	Qualitatively KE seasonality is similar to TKE and therefore we will focus mostly on the seasonality of TKE.
 
-	\section{Results}
-	\label{sec:Results}
-	
-	\subsection{Coherent Eddy Energetics}
+	\section{Global Coherent Eddy Energetics}
 	\label{subsec:CEKE_climatology}
 
 	\textbf{Figure 2}
@@ -205,7 +210,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \label{fig:eddy_energy_polar}
 	\end{figure}
 	
-	\subsection{Coherent Eddy Statistics}
+	\section{Global Coherent Eddy Statistics}
 	\label{subsec:CE_stats}
 
 	\textbf{Figure 5}
@@ -219,12 +224,13 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		\item Interior of the gyres we can observe that there is and important amplitude of the coherent eddy field. 
 		\item Preferred eddy amplitude sign in boundary currents; positive amplitude polewards to the boundary current mean location, and negative amplitude equatorwards. This is consistent with the shed of coherent eddies from the boundary currents.
 		\item There regions with large $\CEKE$ ratio show also a large coherent eddy amplitude.
+		\item Absolute eddy amplitude has the similar signature as CEKE.
 	\end{itemize}
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/global_stats_polarity.pdf}
-	    \caption{Climatology of the coherent eddy statistics. a) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Chelton_Global_2007}; b) Climatology of the warm core coherent eddy amplitude ($\cEddy_{amp}$). c) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Martinez_Kinetic_2019}; d) Climatology of the cold core coherent eddy amplitude ($\cEddy_{amp}$).}
+	    \includegraphics[width=1\textwidth]{figures/global_stats_V1.pdf}
+	    \caption{Climatology of the coherent eddy statistics. a) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Chelton_Global_2007};  b) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Martinez_Kinetic_2019}; c) Climatology of the mean absolute coherent eddy amplitude ($\cEddy_{amp}$). d) Climatology of the mean coherent eddy amplitude ($\cEddy_{amp}$).}
 	    \label{fig:eddy_stats_climatology}
 	\end{figure}
 
@@ -242,69 +248,51 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/All_polar_plots_eddy_stats_polarity.pdf}
+	    \includegraphics[width=1\textwidth]{figures/All_polar_plots_eddy_stats_polarity_V1.pdf}
 	    \caption{Hemispherical seasonality of the coherent eddy statistics;
 		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the northern hemisphere seasonal cycle, while panels d,e, and f correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_stats_polar}
 	\end{figure}
 
+	\textbf{Figure 6}
+	\begin{itemize}
+		\item a
+	\end{itemize}
 
-	\subsection{Regional}
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=1\textwidth]{figures/All_polar_plots_eddy_stats_polarity_V2.pdf}
+	    \caption{Hemispherical seasonality of the coherent eddy statistics;
+		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the northern hemisphere seasonal cycle, while panels d,e, and f correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
+	    \label{fig:eddy_stats_polar}
+	\end{figure}
+
+	\section{Trends}
+	\label{sec:CE_trends}
+
+	\textbf{Figure 13}
+	\begin{itemize}
+		\item The number and amplitude of coherent eddies from two eddy tracking algorithms show consistent trend patterns. 
+		\item In particularly, we observe a decrease in the number of eddies in the southern ocean, as well as sectors in the North Atlantic and North Pacific. 
+		\item Meanwhile the amplitude seems to be increasing in those same regions. 
+		\item Some of these regions have undergone a readjustment to stronger winds, thus the observed trends in the eddy amplitude suggests an intensification of the coherent eddy field to an increase in the forcing.
+		\item This increase is consistent with \citet{Martinez_Kinetic_2021}
+	\end{itemize}
+
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=1\textwidth]{figures/all_trackeddy_trends.pdf}
+	    \caption{Trends of coherent eddy statistics. a,b and c Trends of the number of identified coherent eddies from satellite observations identified using TrackEddy, satellite observations identified using Chelton's, and state of the art numerical simulation identified using TrackEddy. d,e and f Trends of the sum of the absolute value of identified coherent eddies amplitude from satellite observations identified using TrackEddy, satellite observations identified using Chelton's, and state of the art numerical simulation identified using TrackEddy. Gray stippling shows regions that are statistically significant above the 95\% confidence level.
+		}
+	    \label{fig:eddy_stats_trends}
+	\end{figure}
+
+
+	\section{Regional}
+
+	\subsection{Boundary Currents}
 	\label{subsec:CE_regional_stats}
-	
-	% \begin{figure}
-	%     \centering
-	%     \includegraphics[width=1\textwidth]{figures/regional_eke_ceke_stats_no_stats.pdf}
-	%     \caption{Climatology of regional statistics of the eddy field and coherent eddy field for the East Indian Ocean, East Tropical Pacific Ocean and South Atlantic Ocean. a-c) Ratio of coherent eddy kinetic energy $\CEKE$ versus eddy kinetic energy $\EKE$; d-f)  mean eddy kinetic energy ($\MEKE$); g-i) mean coherent eddy kinetic energy ($\MCEKE$).}
-	%     \label{fig:regional_energy_ratios}
-	% \end{figure}
 
-	\textbf{Figure 7}
-	\begin{itemize}
-		\item South of the Leeuwin Current there is an important dominance fo the coherent eddy field, where it explains around 80\% of the eddy kinetic energy.
-		\item Although this region does not have a large $\EKE$, we can observe a considerable amount of eddies across the region, but more importantly the coherent eddy amplitude is particularly large in those regions with coherent eddy dominance. 
-		\item The solid lines show an decrease in the number of eddies, but an increase in the eddy amplitude. 
-		\item Moreover, the coherent eddy number peaks in August.
-		\item Meanwhile coherent eddies with the positive amplitude have a smaller amplitude than the negative, furthermore, the positive eddies peak in Jun and show a interannual modulation, while the negative eddies peak in October. 
-		\item Research regional dynamics (Add here why we may expect this response.)
-	\end{itemize}
-
-	\begin{figure}
-	    \centering
-	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_0.pdf}
-	    \caption{ Climatology of the eddy field and coherent eddy field at the Leeuwin Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Thick lines show the running average over 2 years and thin lines show the running average over 90 days of the coherent eddy number sum and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; e) Seasonal cycle of the number of eddies f) Seasonal cycle of the positive coherent eddy amplitude. g) Seasonal cycle of the negative coherent eddy amplitude.}
-	    \label{fig:leeuwin_cycle}
-	\end{figure}
-
-	\textbf{Figure 8}
-	\begin{itemize}
-		\item South west of the Hawai'i there is an important influence of the coherent eddies.
-		\item Although, near we observe a large amount of numbers of eddies in both eddy count form Chelton and JMM, the amplitude is again responsible of the coherent eddy dominance. 
-		\item Note the eddy number peaks in March, while the positive eddy amplitude peaks in October, while the negative eddies peak in June.
-		\item Research regional dynamics (Add here why we may expect this response.)
-	\end{itemize}
-
-	\begin{figure}
-	    \centering
-	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_1.pdf}
-	    \caption{Same as Figure \ref{fig:leeuwin_cycle} but for the Central North Pacific.}
-	    \label{fig:east_tropical_cycle}
-	\end{figure}
-
-	\textbf{Figure 9}
-	\begin{itemize}
-		\item Here we observe that the number of eddies and eddy amplitude are large in the area where the coherent eddies dominate the eddy field.
-		\item Dynamically, in this region eddies are generated due to Rossby wave propagation along the coast that becomes unstable and sheds eddies at the Tehuantepec Gulf.
-		\item The seasonal cycle shows a peak in Jun, while the positive amplitude is observed in March and the negative amplitude maximum occurs in September. 
-		\item Research regional dynamics (Add here why we may expect this response.)
-	\end{itemize}
-
-	\begin{figure}
-	    \centering
-	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_3.pdf}
-	    \caption{Same as Figure \ref{fig:leeuwin_cycle} but for the East Tropical Pacific.}
-	    \label{fig:south_atlantic_cycle}
-	\end{figure}
 
 	\textbf{Figure 10}
 	\begin{itemize}
@@ -343,28 +331,58 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_5.pdf}
-	    \caption{Same as Figure \ref{fig:leeuwin_cycle} but for the Gulf Stream.}
+	    \caption{\textbf{Move to supplementary} Same as Figure \ref{fig:leeuwin_cycle} but for the Gulf Stream.}
 	    \label{fig:south_atlantic_cycle}
 	\end{figure}
 
-	\section{Trends}
-	\label{sec:CE_trends}
+	\subsection{Eastern currents}
 
-	\textbf{Figure 13}
+
+	\textbf{Figure 7}
 	\begin{itemize}
-		\item The number and amplitude of coherent eddies from two eddy tracking algorithms show consistent trend patterns. 
-		\item In particularly, we observe a decrease in the number of eddies in the southern ocean, as well as sectors in the North Atlantic and North Pacific. 
-		\item Meanwhile the amplitude seems to be increasing in those same regions. 
-		\item Some of these regions have undergone a readjustment to stronger winds, thus the observed trends in the eddy amplitude suggests an intensification of the coherent eddy field to an increase in the forcing.
-		\item This increase is consistent with \citet{Martinez_Kinetic_2021}
+		\item South of the Leeuwin Current there is an important dominance fo the coherent eddy field, where it explains around 80\% of the eddy kinetic energy.
+		\item Although this region does not have a large $\EKE$, we can observe a considerable amount of eddies across the region, but more importantly the coherent eddy amplitude is particularly large in those regions with coherent eddy dominance. 
+		\item The solid lines show an decrease in the number of eddies, but an increase in the eddy amplitude. 
+		\item Moreover, the coherent eddy number peaks in August.
+		\item Meanwhile coherent eddies with the positive amplitude have a smaller amplitude than the negative, furthermore, the positive eddies peak in Jun and show a interannual modulation, while the negative eddies peak in October. 
+		\item Research regional dynamics (Add here why we may expect this response.)
 	\end{itemize}
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/all_trackeddy_trends.pdf}
-	    \caption{Trends of coherent eddy statistics. a,b and c Trends of the number of identified coherent eddies from satellite observations identified using TrackEddy, satellite observations identified using Chelton's, and state of the art numerical simulation identified using TrackEddy. d,e and f Trends of the sum of the absolute value of identified coherent eddies amplitude from satellite observations identified using TrackEddy, satellite observations identified using Chelton's, and state of the art numerical simulation identified using TrackEddy. Gray stippling shows regions that are statistically significant above the 95\% confidence level.
-		}
-	    \label{fig:eddy_stats_trends}
+	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_0.pdf}
+	    \caption{ Climatology of the eddy field and coherent eddy field at the Leeuwin Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Thick lines show the running average over 2 years and thin lines show the running average over 90 days of the coherent eddy number sum and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; e) Seasonal cycle of the number of eddies f) Seasonal cycle of the positive coherent eddy amplitude. g) Seasonal cycle of the negative coherent eddy amplitude.}
+	    \label{fig:leeuwin_cycle}
+	\end{figure}
+
+	% \textbf{Figure 8}
+	% \begin{itemize}
+	% 	\item South west of the Hawai'i there is an important influence of the coherent eddies.
+	% 	\item Although, near we observe a large amount of numbers of eddies in both eddy count form Chelton and JMM, the amplitude is again responsible of the coherent eddy dominance. 
+	% 	\item Note the eddy number peaks in March, while the positive eddy amplitude peaks in October, while the negative eddies peak in June.
+	% 	\item Research regional dynamics (Add here why we may expect this response.)
+	% \end{itemize}
+
+	% \begin{figure}
+	%     \centering
+	%     \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_1.pdf}
+	%     \caption{Same as Figure \ref{fig:leeuwin_cycle} but for the Central North Pacific.}
+	%     \label{fig:east_tropical_cycle}
+	% \end{figure}
+
+	\textbf{Figure 9}
+	\begin{itemize}
+		\item Here we observe that the number of eddies and eddy amplitude are large in the area where the coherent eddies dominate the eddy field.
+		\item Dynamically, in this region eddies are generated due to Rossby wave propagation along the coast that becomes unstable and sheds eddies at the Tehuantepec Gulf.
+		\item The seasonal cycle shows a peak in Jun, while the positive amplitude is observed in March and the negative amplitude maximum occurs in September. 
+		\item Research regional dynamics (Add here why we may expect this response.)
+	\end{itemize}
+
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_3.pdf}
+	    \caption{Same as Figure \ref{fig:leeuwin_cycle} but for the East Tropical Pacific.}
+	    \label{fig:south_atlantic_cycle}
 	\end{figure}
 	
 	\section{Summary and Conclusions}	
