@@ -103,16 +103,24 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 \label{sec:Methods}
 
 	\subsection{Data}
-	We use daily sea surface height (SSH) data are available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. This gridded product contains the sea surface height and geostrophic velocities with daily 0.25$^\circ$ resolution from January 1993 to 2019. The daily geostrophic velocities allowed us to compute the $\KE$ and $\EKE$ over the satellite records. Mean and anomaly velocities are in  in reference to the full record mean of SSH (1993–2019), while all presented climatologies correspond to the mean of the full record.
-	
-	Over the same record, we use a mesoscale coherent eddy trajectory dataset released by Chelton and Schlax (2013) to compare global statistics of coherent eddies in the present study. This dataset was produced via an automated eddy identification developed by \citet{Chelton_The_2011}. 
-	
-	The eddy identification procedure defines mesoscale eddies directly using the sea surface height (SSH) ﬁeld. This method was applied to avoid noise amplification in the SSH ﬁeld. Compared with the Okubo–Weiss parameter identification procedure, the SSH-based procedure without the differentiation calculation of the SSH ﬁeld effectively solves the overestimation issue of eddy identification with less computational load. The dataset retains only those eddies with lifetimes of four weeks or longer and provides trajectories with 7-day time steps 
+	We use daily sea surface height (SSH) data are available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. 
+	This gridded product contains the sea surface height and geostrophic velocities with daily 0.25$^\circ$ resolution from January 1993 to 2019.
+	The daily geostrophic velocities allowed us to compute the kinetic energy ($\KE$) and eddy kinetic energy ($\EKE$) over the satellite record.
 
-	Wind stress averaged over oceanic regions between 45S and 65S calculated from the ERA interim reanalysis [Dee et al., 2011] (Figure 1b, black line) correlates well with the annually averaged SAM (correlation 0.88). Wind stress increases from 1990 onward at a rate consistent with the long-term trend (not shown) albeit masked by strong levels of interannual variability. We also show how the ERA-interim wind stress has varied within each ocean basin (Figure 1c). For this, we divide the Southern Ocean up into the three sectors similar to those used by MH06 (Indian Ocean: 40E–150E, 57S–44S; Paciﬁc Ocean: 150E–288E, 62S–48S; and Atlantic Ocean: 325E–10E, 56S–46S). The regional analysis indicates that the long-term trend in Southern Ocean wind stress is dominated by changes in the Paciﬁc sector.
+	The main source of $\EKE$ is the time-varying wind \citep{Ferrari_energy_2009}, thus we computed the seasonal cycle of the wind magnitude from the JRA55 reanalysis \citep{Tsujino_JRA_2018} using wind velocities at 10m above the ocean's surface. 
+	
+	Over the same record, coherent eddy statistics are gridded in a 1$^\circ$ resolution the identified mesoscale coherent eddies datasets released by \citet{Chelton_mesoscale_2013} and \citet{Martinez_Kinetic_2019}. 
 
-	\subsection{Coherent eddy identification algorithm}
-	TrackEddy is an autonomous eddy identification, tracking, and reconstruction algorithm, which assumes eddies can be represented as isolated anisotropic Gaussian anomalies. The main and unique characteristic of the TrackEddy algorithm, which differs from previous algorithms (Ashkezari et al., 2016; Chelton et al., 2007; Faghmous et al., 2015), is its capability to reconstruct an optimal Gaussian anomaly for each identified eddy. This Gaussian anomaly can be used to reconstruct the eddy velocities to calculate the TKE associated with the identified coherent eddies. TrackEddy follows a similar work‐ﬂow to previous methods using SSH. It starts with a single snapshot of SSHa, where potential eddies are isolated using study‐speciﬁc criteria. Generally, each study describes a strict definition of what will be considered an eddy by constraining their size and/or shape. Then, the algorithm iterates at multiple discrete SSHa levels in which the coherent eddy definition is used to identify eddies. The identification algorithm at each discrete SSHa level is then applied to all time steps for which data are available. The following subsections present the TrackEddy algorithm structure, criteria, user‐specified values, and energy calculation.
+
+	Although both dataset are produced via automated eddy identification algorithms using closed contours of SSH, these datasets have significant differences in the criteria they use to identify and record coherent eddies statistics. 
+	The major difference include: (i) Martinez's algorithm requires an good adjustment between a 2D Gaussian and the SSH anomaly (SSHa) surface within the identify closed contour, while Chelton's only uses the outer-most closed contour of SSH; (ii) Martinez's dataset reports the maximum SSHa within the identified coherent eddy, while Chelton's algorithm reports the maximum SSH value minus the discrete level in which the coherent eddy was identified; Martinez's dataset includes all detected coherent eddies, while Chelton's dataset excludes (iii) coherent eddies with lifetimes shorter that four weeks and (iv) coherent eddy amplitudes smaller than 1cm. Moreover, Martinez's algorithm allows the reconstruction of the coherent eddy field under the assumption that coherent eddies have a 2D Gaussian imprint in the sea surface height. These Gaussian anomalies then allow us to estimate the coherent geostrophic eddy velocities and thus the kinetic energy contained only by coherent eddies.
+
+
+	In this study, we analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019, moreover, we exclude the equatorial region (10$^\circ$S - 10$^\circ$N ) and poleward of 60$^\circ$.
+	Seasonal climatologies are calculated by monthly averages, while hemispherical time-series are filtered with a running average of 90 days. Trends 
+
+
+	\textbf{Define mean abs eddy amplitude and eddy count.}
 
 	\subsection{Kinetic Energy decomposition}
 
@@ -132,6 +140,8 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \caption{Snapshot of surface kinetic energy ($\MKE$), surface eddy kinetic energy ($\MEKE$), surface coherent eddy kinetic energy ($\MCEKE$), and surface non-coherent eddy kinetic energy ($\MnCEKE$) for the 1st of January 2017.}
 	    \label{fig:eddy_snapshot}
 	\end{figure}
+
+	we divide the Southern Ocean up into the three sectors similar to those used by MH06 (Indian Ocean: 40E–150E, 57S–44S; Paciﬁc Ocean: 150E–288E, 62S–48S; and Atlantic Ocean: 325E–10E, 56S–46S). The regional analysis indicates that the long-term trend in Southern Ocean wind stress is dominated by changes in the Paciﬁc sector.
 
 
 % %	
@@ -199,7 +209,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/All_polar_plots.pdf}
+	    \includegraphics[width=95mm]{figures/All_polar_plots.pdf}
 	    \caption{Hemispherical seasonality of eddy kinetic energy ($\EKE$), coherent eddy kinetic energy ($\CEKE$). Panels a, and b show the northern hemisphere seasonal cycle, while panels c, and d correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for the kinetic energy components and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_energy_polar}
 	\end{figure}
@@ -242,7 +252,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/All_polar_plots_eddy_stats_polarity_V1.pdf}
+	    \includegraphics[width=95mm]{figures/All_polar_plots_eddy_stats_polarity_V3.pdf}
 	    \caption{Hemispherical seasonality of the coherent eddy statistics;
 		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the northern hemisphere seasonal cycle, while panels d,e, and f correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_stats_polar}
@@ -255,7 +265,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=1\textwidth]{figures/All_polar_plots_eddy_stats_polarity_V2.pdf}
+	    \includegraphics[width=95mm]{figures/All_polar_plots_eddy_stats_polarity_V4.pdf}
 	    \caption{Hemispherical seasonality of the coherent eddy statistics;
 		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the northern hemisphere seasonal cycle, while panels d,e, and f correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_stats_polar}
@@ -383,6 +393,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\label{sec:Conclusions}
 	
 	\acknowledgments
+	\citet{Chelton_mesoscale_2013} dataset was produced by SSALTO/DUACS and distributed by AVISO+ (\url{https://www.aviso.altimetry.fr/}) with support from CNES, developed and validated in collaboration with E.Mason at IMEDEA.
 	
 	\bibliography{biblio.bib}
 	
