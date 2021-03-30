@@ -1,5 +1,4 @@
-# CEKE_climatology
-# Global changes in oceanic mesoscale currents over the satellite altimetry record
+# Climatology, seasonality and trends of oceanic coherent eddies
 
 | Zenodo |
 |:------:|
