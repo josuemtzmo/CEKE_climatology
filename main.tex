@@ -29,7 +29,7 @@
 \begin{document}
 \title{Climatology, seasonality and trends of oceanic coherent eddies}
 
-\authors{Josu\'e Mart\'inez-Moreno\affil{1}, Andrew McC. Hogg\affil{1}, and Matthew England\affil{2}}
+\authors{Josu\'e Mart\'inez-Moreno\affil{1}, Andrew McC. Hogg\affil{1}, and Matthew H. England\affil{2}}
 \affiliation{1}{Research School of Earth Science and ARC Center of Excellence for Climate Extremes, Australian National University, Canberra, Australia}
 \affiliation{2}{Climate Change Research Centre (CCRC), UNSW Australia, Sydney NSW, Australia}
 
@@ -76,20 +76,13 @@ These mesoscale processes are highly energetic, and they play a crucial role in 
 
 
 Coherent eddies are quasi-circular currents. According to their rotational direction, the sea surface height anomaly within a coherent eddy can have a negative or positive sea surface height anomaly (cold-core and warm-core coherent eddies, respectively). 
-This characteristic sea surface height signature of coherent eddies has been utilized to automatically identify and track coherent eddies from satellite altimetry \citep{Cui_eddy_identification_2020,Martinez_Kinetic_2019, Ashkezari_eddies_2016, Faghmous_A_2015,Chelton_Global_2007}. 
+This characteristic sea surface height signature of coherent eddies has been utilized to automatically identify and track coherent eddies from satellite altimetry \citep{Cui_eddy_identification_2020,Martinez_TKE_2019, Ashkezari_eddies_2016, Faghmous_A_2015,Chelton_Global_2007}. 
 Automated identification algorithms of coherent eddies have shown their ubiquity in the oceans, with a predominant influence at hotpots of eddy activity such as boundary currents and the Antarctic Circumpolar Current. In these regions, \citet{Chelton_The_2011} estimated that coherent eddies contribute around 40--50\% of the mesoscale kinetic energy \citep{Chelton_The_2011} and thus a significant fraction of the total kinetic energy \citep{Ferrari_energy_2009}. Although this unique estimate showcases the importance of the mesoscale coherent eddy field, the energy contained by coherent eddies was estimated by extracting the geostrophic velocities within the detected coherent eddies, thus it is possible it may contain energy from other processes. Coherent eddies are not only abundant and may have a large proportion of the surface kinetic energy budget, but they are also essential to ocean dynamics as concluded by many previous studies \citep{Patel_SO_eddies_2020,Schubert_submesoscale_2019,Pilo_eddy_2015,Frenger_Southern_2015,Frenger_Imprint_2013,BeronVera_Agulhas_2013,Siegel_Bio_2011,Hogg_Interdecadal_2006}.
 
 
 There is broad consensus that mesoscale eddy kinetic energy has a pronounced seasonal variability \citep{Uchida_Seasonality_2017,Kang_On_2017,Qiu_seasonal_2004, Qiu_seasonal_1999}. Several hypotheses have been proposed to explain this seasonality including: seasonal variations of atmospheric forcing \citep{Sasaki_seasonal_2014}, seasonality of the mixed layer depth \citep{Qiu_seasonal_2014,Callies_season_2015}, seasonality of the intensity of barotropic instability \citep{Qiu_seasonal_2004}, the variability of the baroclinic instability due to the seasonality of the vertical shear \citep{Qiu_seasonal_1999}, and a seasonal lag of the inverse energy cascade (energy is transported between scales from small to large; \citealp{Arbic_cascade_2013}) in combination with the presence of a front in the mixed layer, which can lead to a seasonal cycle of the baroclinic instability \citep{Qiu_seasonal_2014}. On one hand, processes such as barotropic and baroclinic instabilities control the seasonality of coherent eddies in the ocean. 
 On the other hand, recent studies using observations and eddy-permitting climate models suggest several long-term adjustments of the global ocean capable of long-term changes in the coherent eddy field. 
 Such readjustments include a multidecadal increase in the ocean stratification resulted from temperature and salinity changes \citep{Li_stratification_2020}, a horizontal readjusment of the sea surface temperature gradients \citep{Ruela_SST_trends_2020,Bouali_SST_grad_trends_2017,Cane_SST_trends_1997}, and an intensification of the kinetic energy, eddy kinetic energy, and mesoscale eddy kinetic energy over the last 3 decades as a consequence of an increase in wind forcing \citep{Hu_acceleration_2020,Wunsch_speeding_2020,Martinez_Kinetic_2021}. All these seasonal factors and long-term readjustments directly influence the annual and decadal response of the coherent eddy field, however, the seasonality of the coherent component of the eddy kinetic energy, as well as the seasonal cycle and trends of the coherent eddy statistics remain unknown.
-
-% Front in ML, then frontal baroclinic instability
-% Vertical Shear = Interior baroclinic instability.
-
-% These readjustments are directly tight with the generation of coherent eddies, thus they could modify the long-term response of the mesoscale coherent eddy field. 
-
-% \textcolor{purple}{\scriptsize \textbf{Andy suggested moving the previous paragraph somewhere else, but I don't know where would it fit best, I think it will be confusing to introduce long-term trends before the seasonal cycle. Any suggestion? Perhaps merge both paragraphs?} i.e. $\dots$ of the baroclinic instability \citep{Qiu_seasonal_2014}. On one hand, processes such as barotropic and baroclinic instabilities could control the seasonality of coherent eddies in the ocean.  On the other hand, recent studies $\dots$ All these seasonal factors and long-term readjustments directly influence the annual and decadal response of the coherent eddy field, however, the seasonality of the coherent component of the eddy kinetic energy, as well as the seasonal cycle and trends of the coherent eddy statistics remain unknown. \textbf{What do you think?}}
 
 Here we present a new global climatology of the coherent eddy kinetic energy by reconstructing the coherent eddy signature from satellite observations. Our climatology documents the seasonal cycle of the coherent eddy kinetic energy, and seasonal cycle and long-term trends of the coherent eddy properties over the satellite record. 
 Moreover, we conduct more detail analysis in regions where coherent eddies dominate the eddy kinetic energy field. 
@@ -101,38 +94,27 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 \section{Methods}
 \label{sec:Methods}
-
-	\subsection{Data}
-	We use daily sea surface height (SSH) data are available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. 
+	% \subsection{Data}
+	We use daily sea surface height (SSH) data made available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. 
 	This gridded product contains the sea surface height and geostrophic velocities with daily 0.25$^\circ$ resolution from January 1993 to 2019.
-	The daily geostrophic velocities allowed us to compute the kinetic energy ($\KE$) and eddy kinetic energy ($\EKE$) over the satellite record.
-
-	The main source of $\EKE$ is the time-varying wind \citep{Ferrari_energy_2009}, thus we computed the seasonal cycle of the wind magnitude from the JRA55 reanalysis \citep{Tsujino_JRA_2018} using wind velocities at 10m above the ocean's surface. 
+	The daily geostrophic velocities allowed us to compute the kinetic energy ($\KE$) and eddy kinetic energy ($\EKE$) over the satellite record. The main source of $\EKE$ is the time-varying wind \citep{Ferrari_energy_2009}, thus we computed the seasonal cycle of the wind magnitude from the JRA55 reanalysis \citep{JMA_JRA55_2013} using wind velocities at 10m above the ocean's surface. 
 	
-	Over the same record, coherent eddy statistics are gridded in a 1$^\circ$ resolution the identified mesoscale coherent eddies datasets released by \citet{Chelton_mesoscale_2013} and \citet{Martinez_Kinetic_2019}. 
+	%We mainly focus on \citet{Martinez_TKE_2019}, and we compare with \citet{Chelton_The_2011}
 
-
-	Although both dataset are produced via automated eddy identification algorithms using closed contours of SSH, these datasets have significant differences in the criteria they use to identify and record coherent eddies statistics. 
-	The major difference include: (i) Martinez's algorithm requires an good adjustment between a 2D Gaussian and the SSH anomaly (SSHa) surface within the identify closed contour, while Chelton's only uses the outer-most closed contour of SSH; (ii) Martinez's dataset reports the maximum SSHa within the identified coherent eddy, while Chelton's algorithm reports the maximum SSH value minus the discrete level in which the coherent eddy was identified; Martinez's dataset includes all detected coherent eddies, while Chelton's dataset excludes (iii) coherent eddies with lifetimes shorter that four weeks and (iv) coherent eddy amplitudes smaller than 1cm. Moreover, Martinez's algorithm allows the reconstruction of the coherent eddy field under the assumption that coherent eddies have a 2D Gaussian imprint in the sea surface height. These Gaussian anomalies then allow us to estimate the coherent geostrophic eddy velocities and thus the kinetic energy contained only by coherent eddies.
-
-
-	In this study, we analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019, moreover, we exclude the equatorial region (10$^\circ$S - 10$^\circ$N ) and poleward of 60$^\circ$.
-	Seasonal climatologies are calculated by monthly averages, while hemispherical time-series are filtered with a running average of 90 days. Trends 
-
-
-	\textbf{Define mean abs eddy amplitude and eddy count.}
+	Over the same record, coherent eddy statistics from \citet{Martinez_TKE_2019}, hereafter M-M, are analyzed and compared to those released by \citet{Chelton_mesoscale_2013}, both datasets are gridded in a 1$^\circ$ resolution. 
+	Although both datasets are produced via automated eddy identification algorithms using closed contours of SSH, these datasets have important differences in the criteria they use to identify and record coherent eddies statistics. 
+	The major difference include; (i) M-M's algorithm requires an adjustment between a 2D Gaussian and the SSH anomaly (SSHa) surface within the identify closed contour, while Chelton's only uses the outer-most closed contour of SSH; (ii) M-M's dataset reports the maximum SSHa within the identified coherent eddy, while Chelton's algorithm reports the maximum SSH value minus the discrete level in which the coherent eddy was identified; M-M's dataset includes all detected coherent eddies, while Chelton's dataset excludes (iii) coherent eddies with lifetimes shorter that four weeks and (iv) coherent eddy amplitudes smaller than 1cm. Moreover, M-M's algorithm allows the reconstruction of the coherent eddy field under the assumption that coherent eddies have a 2D Gaussian imprint in the sea surface height. These Gaussian anomalies then allow us to estimate the coherent geostrophic eddy velocities and thus the kinetic energy contained only by coherent eddies.
 
 	\subsection{Kinetic Energy decomposition}
 
-	Kinetic energy is commonly divided into the mean and time-varying components through a Reynolds decomposition. At a given time, the velocity field $\mathbf{u} = (u,v)$ is split into the time mean ($\mathbf{\overline{u}}$) and time varying components ($\mathbf{u'}$). Additionally, we further decompose the eddy kinetic energy into the eddy kinetic energy contained by coherent features ($\mathbf{u'_e}$) and non-coherent ($\mathbf{u'_n}$). Therefore the KE equation can be written as:
+	Kinetic energy is commonly divided into the mean and time-varying components through a Reynolds decomposition. At a given time, the velocity field $\mathbf{u} = (u,v)$ is split into the time mean ($\mathbf{\overline{u}}$) and time varying components ($\mathbf{u'}$). Moreover, M-M proposed to further decompose the eddy kinetic energy into the energy contained by coherent features ($\mathbf{u'_e}$) and non-coherent features ($\mathbf{u'_n}$). Therefore the KE equation can be written as:
 	
 	\begin{equation}
 		\mathrm{KE} = \underbrace{\overline{u}^2 + \overline{v}^2}_{\mKE} + 
 		\underbrace{\underbrace{{u'}_e^2+{v'}_e^2}_{\CEKE}  + \underbrace{{u'}_n^2+{v'}_n^2}_{\nCEKE} + \mathcal{O}_c^2 }_{\EKE} + \mathcal{O}^2
 	\end{equation}
-	% \underbrace{ u'_e^2 + v'_e^2 }_{CEKE} + \underbrace{ u'_n^2 + v'_n}^2}_{nCEKE} 
-	% + \mathcal{O}^2}_{\mathbf{u'}^2} + \mathbf{\overline{u}}\mathbf{u'}
-	Due to the properties of this decomposition, the second order term $\mathcal{O}^2$ is zero when averaged over the same period as $\mathbf{\overline{u}}$. However, $\mathcal{O}_c^2$ is only negligible when averaged in time and space. For more information about the decomposition of the field into coherent features and non-coherent features refer to \citet{Martinez_Kinetic_2019}. A global snapshot of each component of kinetic energy decomposition is shown in figure \ref{fig:eddy_snapshot}, where the imprint of the coherent eddies corresponds to rings of kinetic energy.
+
+	Due to the properties of this decomposition, the second order term $\mathcal{O}^2$ is zero when averaged over the same period as $\mathbf{\overline{u}}$. However, $\mathcal{O}_c^2$ is negligible when averaged over time and space. More information about the decomposition of the field into coherent features and non-coherent features is explained by \citet{Martinez_TKE_2019}. A global snapshot of each component of kinetic energy decomposition is shown in figure \ref{fig:eddy_snapshot}, where the $\KE$ and $\EKE$ are comprised of rings and filaments. As expected, the decomposition of $\EKE$ into $\CEKE$ and $\nCEKE$ components exhibit only ring-like signatures expected of coherent eddies, while the non-coherent component shows filaments and some unidentified coherent eddies.
 
 	\begin{figure}
 	    \centering
@@ -141,16 +123,21 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \label{fig:eddy_snapshot}
 	\end{figure}
 
-	we divide the Southern Ocean up into the three sectors similar to those used by MH06 (Indian Ocean: 40E–150E, 57S–44S; Paciﬁc Ocean: 150E–288E, 62S–48S; and Atlantic Ocean: 325E–10E, 56S–46S). The regional analysis indicates that the long-term trend in Southern Ocean wind stress is dominated by changes in the Paciﬁc sector.
+	\subsection{Eddy statistics}
 
-
-% %	
-% %	Qualitatively KE seasonality is similar to TKE and therefore we will focus mostly on the seasonality of TKE.
+	The eddy statistics used in this study include the eddy count ($\mathrm{cEddy}_{n}$) defined as the number of eddies per grid cell, and the mean eddy amplitude defined as the mean amplitude of the coherent eddies within the cell ($\mathrm{cEddy}_{amp}$), The latter metric can be separated into positive ($\mathrm{cEddy}_{amp}^{+}$) and negative ($\mathrm{cEddy}_{amp}^{-}$) coherent eddy amplitudes, defined as the mean amplitude of warm core and cold core coherent eddies, respectively, within the cell. 
+	The absolute eddy amplitude ($|\mathrm{cEddy}_{amp}|$) is then defined as:
+	\begin{equation}
+	|\mathrm{cEddy}_{amp}| = \frac{1}{2} \left(\mathrm{cEddy}_{amp}^{+} -  \mathrm{cEddy}_{amp}^{-} \right)
+	\end{equation}
+	Note that the $\mathrm{cEddy}_{amp}^{+}$ and $\mathrm{cEddy}_{amp}^{-}$ are sign definite, thus the difference will always be positive, mean $\mathrm{cEddy}_{amp}$ can be negative or positive noting the dominant polarity of coherent eddies in the region. We analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019. We exclude the equatorial region (10$^\circ$S - 10$^\circ$N) and poleward of 60$^\circ$. Note that the climatology of $\mathrm{cEddy}_{n}$ is computed by adding all the identified eddies over the record, while all other climatological statistics are computed as the time-average over the record.  Seasonal climatologies are calculated for the monthly average of each coherent eddy statistic, while hemispherical time-series are filtered with a running average of 90 days. Trends of $\mathrm{cEddy}_{n}$ and $|\mathrm{cEddy}_{amp}|$ are calculated by coarsening the dataset to a 5$^\circ$ grid, and then linear trends are computed for each grid point, the statistical significance is assessed by a modified Mann-Kendall test \citep{Sheng_MK_2004}. Time averages are denoted by $\overline{\phantom{XX}}$, while spatial averages are shown by $\left< \phantom{X}\right>$.
 
 	\section{Global Coherent Eddy Energetics}
 	\label{subsec:CEKE_climatology}
 
 	\textbf{Figure 2}
+
+
 	\begin{itemize}
 		\item All KE components have large energy contents in the boundary currents and antarctic circumpolar current. 
 		\item In many cases is the same, but there actually some differences There are several regions where the coherent component is larger than the non-coherent, we will investigate these in more detail in section XX.
@@ -203,7 +190,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		\item Response of the $\EKE$ and $\CEKE$ show a seasonal lag of $\sim$6 months to the forcing of the Winds. Make sure to note the maximum over the hemisphere, locally, the winds may peak in different months. 
 		\item Methods, explain more about winds or here. 
 		\item The coherent eddy field show a large interannual variability.
-		\item In the Southern Ocean we observe a concentric growth as time passes, which support the increasing trends in the Southern Ocean observed by \citep{Hogg_Recent_2015,Martinez_Kinetic_2019,Martinez_Kinetic_2021}
+		\item In the Southern Ocean we observe a concentric growth as time passes, which support the increasing trends in the Southern Ocean observed by \citep{Hogg_Recent_2015,Martinez_TKE_2019,Martinez_Kinetic_2021}
 		\item Point that in the northern hemisphere in winter the CEKE appears to be decreasing.
 	\end{itemize}
 
@@ -234,7 +221,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/global_stats_V1.pdf}
-	    \caption{Climatology of the coherent eddy statistics. a) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Chelton_Global_2007};  b) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Martinez_Kinetic_2019}; c) Climatology of the mean absolute coherent eddy amplitude ($\cEddy_{amp}$). d) Climatology of the mean coherent eddy amplitude ($\cEddy_{amp}$).}
+	    \caption{Climatology of the coherent eddy statistics. a) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Chelton_Global_2007};  b) Climatology of the number of coherent eddies ($\cEddy_n$) identified by \citet{Martinez_TKE_2019}; c) Climatology of the mean absolute coherent eddy amplitude ($\cEddy_{amp}$). d) Climatology of the mean coherent eddy amplitude ($\cEddy_{amp}$).}
 	    \label{fig:eddy_stats_climatology}
 	\end{figure}
 
