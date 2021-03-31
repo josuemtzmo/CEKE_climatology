@@ -65,10 +65,6 @@
 	
 \end{abstract}	
 
-% -	Ratios of KE!! 
-% -	Coherent signature + seasonality  and non-coherent signature (not key point)
-% -	Identify regions dominated by coherent eddies
-	
 \section{Introduction}
 
 Mesoscale ocean variability with spatial scales of tens to hundreds of kilometers is comprised of processes such as vortices, waves, and jets \citep{Ferrari_energy_2009, Fu_Eddy_2010}. 
@@ -88,18 +84,15 @@ Here we present a new global climatology of the coherent eddy kinetic energy by 
 Moreover, we conduct more detail analysis in regions where coherent eddies dominate the eddy kinetic energy field. 
 This paper is structured as follows:  the data sources and methodology are described in section \ref{sec:Methods}.
 Then, we present the climatology, energy ratios, and global seasonality of the coherent eddy kinetic energy in subsection \ref{subsec:CEKE_climatology}. 
-Subsection \ref{subsec:CE_stats} presents the global climatology and seasonality of coherent eddy properties, followed by the seasonal cycle and coherent eddy property time-series in regions dominated by coherent eddies (subsection \ref{subsec:CE_regional_stats}). 
+Subsection \ref{subsec:CE_stats} presents the global climatology and seasonality of coherent eddy properties, followed by the seasonal cycle and coherent eddy property time-series in regions dominated by coherent eddies (subsection \ref{sec:CE_regional_stats}). 
 We then focus our attention on the long-term changes of the coherent eddy properties (section \ref{sec:CE_trends}). 
 Finally, section \ref{sec:Conclusions} summarizes the main results and discusses the implications of this study.
 
 \section{Methods}
 \label{sec:Methods}
-	% \subsection{Data}
 	We use daily sea surface height (SSH) data made available by the Copernicus Marine Environment Monitoring Service in near real time \citep{CMEMS_aviso_2017}. 
 	This gridded product contains the sea surface height and geostrophic velocities with daily 0.25$^\circ$ resolution from January 1993 to 2019.
 	The daily geostrophic velocities allowed us to compute the kinetic energy ($\KE$) and eddy kinetic energy ($\EKE$) over the satellite record. The main source of $\EKE$ is the time-varying wind \citep{Ferrari_energy_2009}, thus we computed the seasonal cycle of the wind magnitude from the JRA55 reanalysis \citep{JMA_JRA55_2013} using wind velocities at 10m above the ocean's surface. 
-	
-	%We mainly focus on \citet{Martinez_TKE_2019}, and we compare with \citet{Chelton_The_2011}
 
 	Over the same record, coherent eddy statistics from \citet{Martinez_TKE_2019}, hereafter M-M, are analyzed and compared to those released by \citet{Chelton_mesoscale_2013}, both datasets are gridded in a 1$^\circ$ resolution. 
 	Although both datasets are produced via automated eddy identification algorithms using closed contours of SSH, these datasets have important differences in the criteria they use to identify and record coherent eddies statistics. 
@@ -130,18 +123,18 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\begin{equation}
 	|\mathrm{cEddy}_{amp}| = \frac{1}{2} \left(\mathrm{cEddy}_{amp}^{+} -  \mathrm{cEddy}_{amp}^{-} \right)
 	\end{equation}
-	Note that the $\mathrm{cEddy}_{amp}^{+}$ and $\mathrm{cEddy}_{amp}^{-}$ are sign definite, thus the difference will always be positive, mean $\mathrm{cEddy}_{amp}$ can be negative or positive noting the dominant polarity of coherent eddies in the region. We analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019. We exclude the equatorial region (10$^\circ$S - 10$^\circ$N) and poleward of 60$^\circ$. Note that the climatology of $\mathrm{cEddy}_{n}$ is computed by adding all the identified eddies over the record, while all other climatological statistics are computed as the time-average over the record.  Seasonal climatologies are calculated for the monthly average of each coherent eddy statistic, while hemispherical time-series are filtered with a running average of 90 days. Trends of $\mathrm{cEddy}_{n}$ and $|\mathrm{cEddy}_{amp}|$ are calculated by coarsening the dataset to a 5$^\circ$ grid, and then linear trends are computed for each grid point, the statistical significance is assessed by a modified Mann-Kendall test \citep{Sheng_MK_2004}. Time averages are denoted by $\overline{\phantom{XX}}$, while spatial averages are shown by $\left< \phantom{X}\right>$.
+	Note that the $\mathrm{cEddy}_{amp}^{+}$ and $\mathrm{cEddy}_{amp}^{-}$ are sign definite, thus the difference will always be positive, mean $\mathrm{cEddy}_{amp}$ can be negative or positive noting the dominant polarity of coherent eddies in the region. We analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019. We exclude the equatorial region (10$^\circ$S - 10$^\circ$N) and poleward of 60$^\circ$. Note that the climatology of $\mathrm{cEddy}_{n}$ is computed by adding all the identified eddies over the record, while all other climatological statistics are computed as the time-average over the record.  Seasonal climatologies are calculated for the monthly average of each coherent eddy statistic, while hemispherical time-series are filtered with a running average of 90 days. Trends of $\mathrm{cEddy}_{n}$ and $|\mathrm{cEddy}_{amp}|$ are calculated by coarsening the dataset to a 5$^\circ$ grid, and then linear trends are computed for each grid point, the statistical significance is assessed by a modified Mann-Kendall test \citep{Sheng_MK_2004}. Time averages are denoted by $\overline{\phantom{X}}$, while area averages are shown by $\left< \phantom{X}\right>$.
 
 	\section{Global Coherent Eddy Energetics}
 	\label{subsec:CEKE_climatology}
 
-	\textbf{Figure 2}
+	% \textbf{Figure 2}
+	% \begin{itemize}
+	% 	\item All KE components have large energy contents in the boundary currents and antarctic circumpolar current. 
+	% 	\item In many cases is the same, but there actually some differences There are several regions where the coherent component is larger than the non-coherent, we will investigate these in more detail in section XX.
+	% \end{itemize}
 
-
-	\begin{itemize}
-		\item All KE components have large energy contents in the boundary currents and antarctic circumpolar current. 
-		\item In many cases is the same, but there actually some differences There are several regions where the coherent component is larger than the non-coherent, we will investigate these in more detail in section XX.
-	\end{itemize}
+	The climatology geostrophic components of the kinetic energy decomposition estimated from sea surface height are shown in Figure \ref{fig:eddy_climatology}. These maps show that many regions of the global ocean are highly energetic in mean KE ($\MKE$), mean EKE ($\MEKE$), mean coherent eddy kinetic energy ($\MCEKE$) and mean non-coherent eddy kinetic energy ($\MnCEKE$). The spatial pattern highlights well known regions of the ocean, where mesoscale processes are abundant, such is the case of western boundary currents, the Antarctic Circumpolar Current and regions within the ocean gyres. Remarkably, the spatial distribution of the energy contained by the reconstructed mesoscale coherent eddies and non-coherent components are similar (Figures \ref{fig:eddy_climatology}c,d), which can be thought as regions where mesoscale activity is intense, however, there are some regions where coherent eddies dominate over non-coherent and vice-versa. Overall, this decomposition suggest that boundary currents and other energetic regions, in particularly, eddy-rich regions in the ocean contain both coherent and non-coherent components of the kinetic energy.
 
 	\begin{figure}
 	    \centering
@@ -150,26 +143,27 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \label{fig:eddy_climatology}
 	\end{figure}
 
-	% mean surface eddy kinetic energy (EKE)
-	% 364 and surface eddy kinetic energy trend between 1993-2020 (a) Zonally averaged SSH
-	% 365 trend; (b) map of SSH trend (92.1% of area is statistically significant above the 95% con-
-	% 366 fidence level; for spatial distribution refer to Extended Data Fig. 1a); (c) zonally averaged
-	% 367 mean EKE; (d) map of mean EKE; (e) zonally averaged EKE trend; (f) map of EKE trend
-	% 368 (55.4% of area is statistically significant above the 95% confidence level; see Extended
-	% 369 Data Fig. 1b).
+	% \textbf{Figure 3}
+	% \begin{itemize}
+		% \item $\MEKE$ is responsible of almost all the $\MKE$ across the ocean, except for regions with persistent currents over time, such as the mean boundary current locations, equatorial pacific currents and regions in the Antarctic Circumpolar current, where the EKE explains around 40\% of the $\MKE$
+		% \item This estimate is consistent with that of Chelton.
+		% \item $\MEKE$ Explains $~80\%$ of $\MKE$, while $\MCEKE$ is $~45\%$ of $\MEKE$ and $\MnCEKE$  is $~60\%$ of $\MEKE$ 
+		% \item $\MCEKE$ is large equatorwards from the Kuroshio current and Agulhas current.
+		% \item Areas with the largest coherent contribution are located in the South of Australia $\MCEKE$ and South Atlantic
+		% \item 
+		% \item $\MnCEKE$ has a large amount of energy at high latitudes, this could be a consequence of the satellites not resolving the mesoscale coherent eddies. 
+	% 	\item Global averages of the ratios show $\MEKE$ explains around 78\% of the ocean $MKE$ field, while coherent eddies and non coherent eddy features contain 49\% and 59\% percent. Note this values don't add to 1 as there are cross terms that contain around XX\% of the total energy.
+	% \end{itemize}
 
-	\textbf{Figure 3}
-	\begin{itemize}
-		\item $\MEKE$ is responsible of almost all the $\MKE$ across the ocean, except for regions with persistent currents over time, such as the mean boundary current locations, equatorial pacific currents and regions in the Antarctic Circumpolar current, where the EKE explains around 40\% of the $\MKE$
-		\item This estimate is consistent with that of Chelton.
-		\item $\MEKE$ Explains $~80\%$ of $\MKE$, while $\MCEKE$ is $~45\%$ of $\MEKE$ and $\MnCEKE$  is $~60\%$ of $\MEKE$ 
-		\item $\MCEKE$ is large equatorwards from the Kuroshio current and Agulhas current.
-		\item Areas with the largest coherent contribution are located in the South of Australia $\MCEKE$ and South Atlantic
-		\item 
-		\item $\MnCEKE$ has a large amount of energy at high latitudes, this could be a consequence of the satellites not resolving the mesoscale coherent eddies. 
-		\item Global averages of the ratios show $\MEKE$ explains around 78\% of the ocean $MKE$ field, while coherent eddies and non coherent eddy features contain 49\% and 59\% per decade. Note this values don't add to 1 as there are cross terms that contain around XX\% of the total energy.
-	\end{itemize}
-
+	Eddy kinetic energy is known to be more than an order of magnitude greater than $\mKE$ \citep{Gill_Energy_1974}, this is clearly shown in Figure \ref{fig:eddy_ratio}a, where the ratio of $\MEKE$ is responsible of almost all the $\MKE$ across the ocean, except for regions with persistent currents over time. 
+	Such regions are located in the mean boundary current locations, the equatorial pacific currents and regions in the Antarctic Circumpolar current, where the EKE explains around 40\% of the $\MKE$. 
+	As estimated by a previous study by \citet{Chelton_The_2011}, the $\EKE$ within coherent eddies with lifetimes grater than 4 weeks contain between 40 to 60 percent of the $\MEKE$. 
+	Our result from reconstructing the coherent eddy signature (Figure \ref{fig:eddy_ratio}b) further corroborates that the coherent component ($\MCEKE$) has around 50\% of the $\MKE$ (Figure \ref{fig:eddy_ratio}d). 
+	Furthermore, global averages of the ratios show $\MEKE$ explains approximately 78\% of the ocean $MKE$ field, while non coherent eddy features contain 48\% and 57\% percent. 
+	Note the globally averaged coherent and non coherent components do not add to 100\% as the cross terms ($\mathcal{O}_c^2$) are different to zero. 
+	This is likely to errors in the coherent eddy reconstruction. 
+	The spatial pattern reveals a dominance of the $\MCEKE$ equatorward from the boundary currents and areas with large coherent eddy contributions of around 90\% of the region's eddy kinetic energy, for example, south of Australia, Tehuantepec Gulf and South Atlantic. 
+	An evident signal is an reduction of the energy contained by coherent eddies at high latitudes and an increase in the energy explained by non-coherent eddies, this could be a consequence of the incapability of the 0.25$^\circ$ satellite resolution ($\sim$ 13 km at 60$^\circ$) to fully resolve coherent eddies with scales smaller than $\sim$10 km (first baroclinic Rossby radius at 60$^\circ$)
 
 	\begin{figure}
 	    \centering
@@ -177,32 +171,45 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \caption{Ratios of the kinetic energy components. a) Map of the proportion of mean eddy kinetic energy ($\EKE$) versus mean kinetic energy ($\MKE$);
 		b) Map of the percentage of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$);
 		c) Map of the percentage of mean non-coherent eddy kinetic energy ($\MnCEKE$) versus mean eddy kinetic energy ($\MEKE$);
-		d) Global averaged percentage of mean eddy kinetic energy ($\left<\MEKE\right>$) versus the global mean kinetic energy ($\left<\MKE\right>$), and percentage of mean coherent eddy kinetic energy ($\left<\MCEKE\right>$) and mean non coherent eddy kinetic energy ($\left<\MnCEKE\right>$) versus global mean eddy kinetic energy ($\left<\MEKE\right>$).
+		d) Global averaged percentage of mean eddy kinetic energy ($\left<\MEKE\right>$) versus the global mean kinetic energy ($\left<\MKE\right>$), and percentage of mean coherent eddy kinetic energy ($\left<\MCEKE\right>$) and mean non coherent eddy kinetic energy ($\left<\MnCEKE\right>$) versus global mean eddy kinetic energy ($\left<\MEKE\right>$). Regions where the depth of the ocean is shallower than 1000m are removed from the ratio estimation.
 		}
 	    \label{fig:eddy_ratio}
 	\end{figure}
 
 	\subsubsection{Seasonality}
 
-	\textbf{Figure 4}
-	\begin{itemize}
-		\item The hemisphere seasonality show the  $\EKE$ and $\CEKE$ peak in summer.
-		\item Response of the $\EKE$ and $\CEKE$ show a seasonal lag of $\sim$6 months to the forcing of the Winds. Make sure to note the maximum over the hemisphere, locally, the winds may peak in different months. 
-		\item Methods, explain more about winds or here. 
-		\item The coherent eddy field show a large interannual variability.
-		\item In the Southern Ocean we observe a concentric growth as time passes, which support the increasing trends in the Southern Ocean observed by \citep{Hogg_Recent_2015,Martinez_TKE_2019,Martinez_Kinetic_2021}
-		\item Point that in the northern hemisphere in winter the CEKE appears to be decreasing.
-	\end{itemize}
+	% \textbf{Figure 4}
+	% \begin{itemize}
+		% \item The hemisphere seasonality show the  $\EKE$ and $\CEKE$ peak in summer.
+		% \item Response of the $\EKE$ and $\CEKE$ show a seasonal lag of $\sim$6 months to the forcing of the Winds. Make sure to note the maximum over the hemisphere, locally, the winds may peak in different months. 
+		% \item The coherent eddy field show a large interannual variability.
+		% \item In the Southern Ocean we observe a concentric growth as time passes, which support the increasing trends in the Southern Ocean observed by \citep{Hogg_Recent_2015,Martinez_TKE_2019,Martinez_Kinetic_2021}
+		% \item Point that in the northern hemisphere in winter the CEKE appears to be decreasing.
+	% \end{itemize}
+
+	In accordance with the previously observed $\EKE$ seasonal cycle, we investigate seasonal cycle of the $\EKE$ and $\CEKE$ for the northern hemisphere (NH; 10$^\circ$N - 60$^\circ$N) and Southern Hemisphere (SH; 60$^\circ$S - 10$^\circ$S). 
+	In both hemispheres (Figure \ref{fig:eddy_energy_polar}), the $\EKE$ and $\CEKE$ peak during the hemispherical summer. In the northern hemisphere, the largest $\EKE$ and $\CEKE$ occurs $\sim$6 months after the maximum winds (Figure \ref{fig:eddy_energy_polar}c and d), while the Southern ocean seems to respond within $\sim$4 months (Figure \ref{fig:eddy_energy_polar}g, and h). This seasonal lag and maximum is consistent with a time-lag of the inverse cascade \citep{Sasaki_seasonal_2014, Qiu_seasonal_2014} where winter has the highest energy at the smallest scales (non-solvable with satellite observations), spring and autumn have the highest and lowest energy in scales of 50-100 km, and summertime has the highest energy at the largest scales ($>$ 100 km; \citealt{Uchida_Seasonality_2017}), thus the maximum of $\EKE$ and $\CEKE$ located during summertime suggest eddies and coherent eddies have scales larger than 100 km.
+
+	The cyclic plots in Figure \ref{fig:eddy_energy_polar} shows the temporal evolution of $\EKE$ and $\CEKE$. 
+	Note that high frequency variability can be observed in the $\CEKE$ field with temporal scales of a few months, this could be attributed local dynamics averaged over the hemisphere, as well as errors within the coherent eddy identification. 
+	% This signature will be further explored in section \ref{sec:CE_regional_stats}.
+	Additionally, cyclic plots highlight long-term temporal changes over the record; (i) northern hemisphere winters show a decrease in the $\CEKE$ field and (ii) the Southern hemisphere show concentric growth over time in $\EKE$ and $\CEKE$, which support the increasing trends in the Southern Ocean observed by \citep{Hogg_Recent_2015,Martinez_TKE_2019,Martinez_Kinetic_2021}. 
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=95mm]{figures/All_polar_plots.pdf}
-	    \caption{Hemispherical seasonality of eddy kinetic energy ($\EKE$), coherent eddy kinetic energy ($\CEKE$). Panels a, and b show the northern hemisphere seasonal cycle, while panels c, and d correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for the kinetic energy components and the wind magnitude, respectively. The line colors show the year.}
+	    \caption{Hemispherical seasonality of eddy kinetic energy ($\EKE$), coherent eddy kinetic energy ($\CEKE$). 
+		Panels a, and b show the northern hemisphere seasonal cycle, while panels c, and d correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). 
+		The green and magenta stars show the maximum of the seasonal cycle for the kinetic energy components and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_energy_polar}
 	\end{figure}
 	
 	\section{Global Coherent Eddy Statistics}
 	\label{subsec:CE_stats}
+
+	Identified coherent eddies properties using automated algorithms allows to estimate the contribution of changes in the number of eddies and the eddy amplitude. 
+	
+
 
 	\textbf{Figure 5}
 	\begin{itemize}
@@ -235,6 +242,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		\item Interestingly, there is a 3 month lag to between the winds and the seasonality of the number of eddies, while the eddy amplitude responds approximately 6 months after the maximum winds. 
 		\item Note that both coherent eddy amplitudes seem to peak around the same time. 
 		\item If we look closely, the growing-shrinking concentric circles correspond to an increasing-decreasing trend. These are particularly obvious as a decrease in the eddy number in the Southern Hemisphere, and a increase in the eddy amplitude. 
+		\item Coherent eddy radius also peaks in the same months of the amplitude with scales of ~100km diameters.
 	\end{itemize}
 
 	\begin{figure}
@@ -244,6 +252,16 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the northern hemisphere seasonal cycle, while panels d,e, and f correspond to the southern hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
 	    \label{fig:eddy_stats_polar}
 	\end{figure}
+
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=95mm]{figures/eddy_diameter_seasonal.pdf}
+	    \caption{Hemispherical seasonality of the coherent eddy diameter}
+	    \label{fig:eddy_stats_polar}
+	\end{figure}
+
+	Should I add a seasonal cycle of the eddy radius? eddy area?, I've plotted it follows closely the eddy amplitude, which is expected, but as I just argued, the mean seasonal cycle shows on average a peak in summertime with diameters of 90 km, in fact, if I mask the radius with eddies larger than 90km, the seasonal cycle peaks in October, while eddies smaller than 90km peak on May. 
+	
 
 	\textbf{Figure 6}
 	\begin{itemize}
@@ -280,9 +298,9 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 
 	\section{Regional}
-
+	\label{sec:CE_regional_stats}
 	\subsection{Boundary Currents}
-	\label{subsec:CE_regional_stats}
+	
 
 
 	\textbf{Figure 10}
@@ -381,6 +399,8 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	
 	\acknowledgments
 	\citet{Chelton_mesoscale_2013} dataset was produced by SSALTO/DUACS and distributed by AVISO+ (\url{https://www.aviso.altimetry.fr/}) with support from CNES, developed and validated in collaboration with E.Mason at IMEDEA.
+	Global coherent eddy reconstruction, coherent and non-conherent eddy kinetic energy datasets, in addition to gridded coherent eddy tracking datasets are publicly available at (\url{https://doi.org/10.5281/zenodo.4646429}). 
+	All analyses and figures in this manuscript are reproducible via Jupyter notebooks and instructions can be found in the Github repository \texttt{CEKE\_climatology} (\url{https://github.com/josuemtzmo/CEKE_climatology}). Trends used the Python Package xarrayMannKendall (\url{https://doi.org/10.5281/zenodo.4458776})
 	
 	\bibliography{biblio.bib}
 	
