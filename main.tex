@@ -27,7 +27,7 @@
 \newcommand{\cEddy}{\textrm{cEddy}}
 
 \begin{document}
-\title{Climatology, seasonality and trends of oceanic coherent eddies}
+\title{Climatology, seasonality, and trends of oceanic coherent eddies}
 
 \authors{Josu\'e Mart\'inez-Moreno\affil{1}, Andrew McC. Hogg\affil{1}, and Matthew H. England\affil{2}}
 \affiliation{1}{Research School of Earth Science and ARC Center of Excellence for Climate Extremes, Australian National University, Canberra, Australia}
@@ -42,8 +42,8 @@
 	\item Seasonal cycle of the number of coherent eddies and 
 	coherent eddy amplitude reveal a 3-6 month lag to wind forcing
 	\item Inverse cascade sets up the seasonal lag of the number and amplitude of coherent eddies.
-	\item The coherent eddy amplitude has increase at 
-	a rate of 3 cm per decade since 1993.
+	% \item The coherent eddy amplitude has increase at 
+	% a rate of 3 cm per decade since 1993.
 \end{keypoints}
 
 
@@ -63,6 +63,8 @@
 
 	\noindent\textbf{Plain language summary}
 	
+	Coherent eddies are the most common feature in the oceans observable from satellites. They are crucial in ocean dynamics as they can transport  properties over long distances and interact with the atmosphere. Our study investigates the seasonal and long-term changes in the abundance and intensity of coherent eddies, by automatically identifying individual eddies over the satellite altimeter record. The seasonal cycle suggests a transition from numerous, smaller, and weaker coherent eddies, to fewer and larger, and stronger coherent eddies over the season. In addition, a long-term adjustment of the coherent eddy field is identified possible due to long-term changes in the climate system.
+
 \end{abstract}	
 
 \section{Introduction}
@@ -81,7 +83,8 @@ Coherent eddies are not only abundant and may have a large proportion of the sur
 There is broad consensus that mesoscale eddy kinetic energy has a pronounced seasonal variability \citep{Uchida_Seasonality_2017,Kang_On_2017,Qiu_seasonal_2004, Qiu_seasonal_1999}. 
 Several hypotheses have been proposed to explain this seasonality including: seasonal variations of atmospheric forcing \citep{Sasaki_seasonal_2014}, seasonality of the mixed layer depth \citep{Qiu_seasonal_2014,Callies_season_2015}, seasonality of the intensity of barotropic instability \citep{Qiu_seasonal_2004}, the variability of the baroclinic instability due to the seasonality of the vertical shear \citep{Qiu_seasonal_1999}, and a seasonal lag of the inverse energy cascade (i.e. energy is transported between scales, from small to large; \citealp{Arbic_cascade_2013}) in combination with the presence of a front in the mixed layer, which can lead to a seasonal cycle of the baroclinic instability \citep{Qiu_seasonal_2014}. On one hand, processes such as barotropic and baroclinic instabilities control the seasonality of coherent eddies in the ocean. 
 On the other hand, recent studies using observations and eddy-permitting climate models suggest several long-term adjustments of the global ocean capable of long-term changes in the coherent eddy field. 
-Such readjustments include a multidecadal increase in the ocean stratification resulted from temperature and salinity changes \citep{Li_stratification_2020}, a horizontal readjusment of the sea surface temperature gradients \citep{Ruela_SST_trends_2020,Bouali_SST_grad_trends_2017,Cane_SST_trends_1997}, and an intensification of the kinetic energy, eddy kinetic energy, and mesoscale eddy kinetic energy over the last 3 decades as a consequence of an increase in wind forcing \citep{Hu_acceleration_2020,Wunsch_speeding_2020,Martinez_Kinetic_2021}. All these seasonal factors and long-term readjustments directly influence the annual and decadal response of the coherent eddy field, however, the seasonality of the coherent component of the eddy kinetic energy, as well as the seasonal cycle and trends of the coherent eddy statistics remain unknown.
+Such readjustments include a multidecadal increase in the ocean stratification resulted from temperature and salinity changes \citep{Li_stratification_2020}, a horizontal readjusment of the sea surface temperature gradients \citep{Ruela_SST_trends_2020,Bouali_SST_grad_trends_2017,Cane_sst_trends_1997}, and an intensification of the kinetic energy, eddy kinetic energy, and mesoscale eddy kinetic energy over the last 3 decades as a consequence of an increase in wind forcing \citep{Hu_acceleration_2020,Wunsch_speeding_2020,Martinez_Kinetic_2021}. 
+All these seasonal factors and long-term readjustments directly influence the annual and decadal response of the coherent eddy field, however, the seasonality of the coherent component of the eddy kinetic energy, as well as the seasonal cycle and trends of the coherent eddy statistics remain unknown.
 
 Here we present a new global climatology of the coherent eddy kinetic energy by reconstructing the coherent eddy signature from satellite observations. Our study documents the seasonal cycle of the coherent eddy kinetic energy, and seasonal cycle and long-term trends of the coherent eddy properties over the satellite record. 
 Moreover, we conduct more detail analysis in regions where coherent eddies dominate the eddy kinetic energy field. 
@@ -120,12 +123,18 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 
 	\subsection{Eddy statistics}
 
-	The eddy statistics used in this study include (i) the eddy count ($\mathrm{cEddy}_{n}$) defined as the number of eddies per grid cell, (ii) the eddy diameter defined as the diameter of a circle with equal area as the closed contour of the identified eddy, and (iii) the mean eddy amplitude defined as the mean amplitude of the coherent eddies within the cell ($\mathrm{cEddy}_{amp}$). The latter metric can be separated into positive ($\mathrm{cEddy}_{amp}^{+}$) and negative ($\mathrm{cEddy}_{amp}^{-}$) coherent eddy amplitudes, defined as the mean amplitude of warm core and cold core coherent eddies, respectively, within the cell. 
-	The absolute eddy amplitude ($|\mathrm{cEddy}_{amp}|$) is then defined as:
+	The eddy statistics used in this study include (i) the eddy count ($\mathrm{cEddy}_{n}$) defined as the number of eddies per grid cell, (ii) the eddy diameter defined as the diameter of a circle with equal area as the closed contour of each identified eddy, and (iii) the mean eddy amplitude defined as the mean amplitude of the coherent eddies within the cell ($\mathrm{cEddy}_{amp}$). The latter metric can be separated into positive ($\mathrm{cEddy}_{amp}^{+}$) and negative ($\mathrm{cEddy}_{amp}^{-}$) coherent eddy amplitudes, defined as the mean amplitude of warm core and cold core coherent eddies, respectively, within the cell. 
+	The polarity independent eddy amplitude ($|\mathrm{cEddy}_{amp}|$) is defined as:
 	\begin{equation}
 	|\mathrm{cEddy}_{amp}| = \frac{1}{2} \left(\mathrm{cEddy}_{amp}^{+} -  \mathrm{cEddy}_{amp}^{-} \right)
 	\end{equation}
-	Note that the $\mathrm{cEddy}_{amp}^{+}$ and $\mathrm{cEddy}_{amp}^{-}$ are sign definite, thus the difference will always be positive, mean $\mathrm{cEddy}_{amp}$ can be negative or positive noting the dominant polarity of coherent eddies in the region. We analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019. We exclude the equatorial region (10$^\circ$S - 10$^\circ$N) and poleward of 60$^\circ$. Note that the climatology of $\mathrm{cEddy}_{n}$ is computed by adding all the identified eddies over the record, while all other climatological statistics are computed as the time-average over the record.  Seasonal climatologies are calculated for the monthly average of each coherent eddy statistic, while hemispherical time-series are filtered with a running average of 90 days. Trends of $\mathrm{cEddy}_{n}$ and $|\mathrm{cEddy}_{amp}|$ are calculated by coarsening the dataset to a 5$^\circ$ grid, and then linear trends are computed for each grid point, the statistical significance is assessed by a modified Mann-Kendall test \citep{Sheng_MK_2004}. Time averages are denoted by $\overline{\phantom{X}}$, while time and area averages are shown by $\left< \phantom{X}\right>$.
+	Note that the $\mathrm{cEddy}_{amp}^{+}$ and $\mathrm{cEddy}_{amp}^{-}$ are sign definite, thus the difference will always be positive, the gridded averaged $\mathrm{cEddy}_{amp}$ can be negative or positive noting the dominant polarity of coherent eddies in the region, and the absolute $\mathrm{cEddy}_{amp}$ is denoted by $\mathrm{cEddy}_{|amp|}$. We analyze the climatology, seasonal cycles and trends of the eddy statistics between 1993 and 2019. We exclude the equatorial region (10$^\circ$S - 10$^\circ$N) and poleward of 60$^\circ$. Note that the climatology of $\mathrm{cEddy}_{n}$ is computed by adding all the identified eddies over the record, while all other climatological statistics are computed as the time-average over the record.  Seasonal climatologies are calculated for the monthly average of each coherent eddy statistic, while hemispherical time-series are filtered with a running average of 90 days. Trends of $\mathrm{cEddy}_{n}$ and $|\mathrm{cEddy}_{amp}|$ are calculated by coarsening the dataset to a 5$^\circ$ grid, and then linear trends are computed for each grid point, the statistical significance is assessed by a modified Mann-Kendall test \citep{Sheng_MK_2004}. 
+
+	Time averages are denoted by $\overline{\phantom{X}}$, while area-weighted averages are denoted using $\left< \phantom{X}\right>$, the area weighted of function $f$ is:
+	\begin{equation}
+		\left< f \right>  = \frac{\int f dx dy}{\int dx dy},
+	\end{equation}
+	area-weighted coherent eddy properties masked areas each time, where no coherent eddies were identified. 
 
 	\section{Global Coherent Eddy Energetics}
 	\label{sec:CEKE_climatology}
@@ -177,9 +186,9 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	Eddy kinetic energy is known to be more than an order of magnitude greater than $\mKE$ \citep{Gill_Energy_1974}; this result is clearly shown in Figure \ref{fig:eddy_ratio}a, where $\MEKE$ is responsible for almost all the $\MKE$ across the ocean, except for regions with persistent currents over time. 
 	Such regions are located in the mean boundary extension locations, the equatorial Pacific currents and regions in the Antarctic Circumpolar Current, where the $\MEKE$ explains around 40\% of the $\MKE$. 
 	In a previous study, \citet{Chelton_The_2011} estimated that the $\EKE$ within coherent eddies with lifetimes greater than 4 weeks contain between 40 to 60 percent of the $\MEKE$. 
-	Our method to reconstruct the coherent eddy signature (Figure \ref{fig:eddy_ratio}b) further corroborates that the coherent component ($\MCEKE$) has $\sim$48\% of the $\MKE$ (Figure \ref{fig:eddy_ratio}d). 
-	Furthermore, global area averages of the ratios show $\MEKE$ explains $\sim$78\% of the ocean $\MKE$ field, while non coherent eddy features contain $\sim$57\% percent of the $\MEKE$. 
-	Note the globally averaged coherent and non coherent components do not add to 100\% as the cross terms ($\mathcal{O}_c^2$) are non-zero, as regions with \textbf{weak} $\EKE$ are double counted in the $\CEKE$ and $\nCEKE$ ratios, and coherent eddy reconstruction errors.
+	Our method to reconstruct the coherent eddy signature (Figure \ref{fig:eddy_ratio}b) further corroborates that the coherent component ($\left<\MCEKE\right>$) has $\sim$48\% of the $\left<\MKE\right>$ (Figure \ref{fig:eddy_ratio}d). 
+	Furthermore, global area averages of the ratios show $\left<\MEKE\right>$ explains $\sim$78\% of the ocean $\left<\MKE\right>$ field, while non coherent eddy features contain $\sim$57\% percent of the $\left<\MEKE\right>$. 
+	Note the globally averaged coherent and non coherent components do not add to 100\% as the cross terms ($\mathcal{O}_c^2$) are non-zero, due to coherent eddy reconstruction errors.
 	The spatial pattern reveals a dominance of the $\MCEKE$ equatorward from the boundary extensions and areas with large coherent eddy contributions of around 80\% of the region's eddy kinetic energy can be found south of Australia, the Tehuantepec Gulf, and the tropical Atlantic. 
 	An evident signal is an reduction of the energy contained by coherent eddies at high latitudes and an increase in the energy explained by non-coherent eddies; this signal could be a consequence of the incapability of the 0.25$^\circ$ satellite resolution ($\sim$ 13 km at 60$^\circ$) to resolve coherent eddies with scales smaller than $\sim$10 km (first baroclinic Rossby radius at 60$^\circ$; \citealt{Chelton_Geographical_1998}).
 
@@ -194,20 +203,20 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		% \item Point that in the northern hemisphere in winter the CEKE appears to be decreasing.
 	% \end{itemize}
 
-	Figure \ref{fig:eddy_energy_polar} shows the seasonal cycle of the $\EKE$ and $\CEKE$ for the Northern Hemisphere (NH; 10$^\circ$N - 60$^\circ$N) and Southern Hemisphere (SH; 60$^\circ$S - 10$^\circ$S). 
-	In both hemispheres, the $\EKE$ and $\CEKE$ peak during summer. In the Northern Hemisphere, the largest $\EKE$ and $\CEKE$ occurs $\sim$6 months after the maximum winds (Figure \ref{fig:eddy_energy_polar}c and d), while the Southern Ocean seems to respond within $\sim$4 months (Figure \ref{fig:eddy_energy_polar}g, and h). This seasonal lag and maximum is consistent with a time-lag of the inverse cascade \citep{Sasaki_seasonal_2014, Qiu_seasonal_2014} where winter has the highest energy at the smallest scales (non-resolvable with satellite observations), spring and autumn have the highest and lowest energy in scales of 50-100 km, and summertime has the highest energy at the largest scales ($>$ 100 km; \citealt{Uchida_Seasonality_2017}). 
-	Thus, the maximum of $\EKE$ and $\CEKE$ located during summertime suggest that the seasonality of eddies and coherent eddies could be dominated by scales larger than 100 km.
+	Figure \ref{fig:eddy_energy_polar} shows the seasonal cycle of the area weighted $\EKE$ and $\CEKE$ for the Northern Hemisphere ($\left< \EKE\right>_{NH}$ and $\left< \CEKE\right>_{NH}$; 10$^\circ$N - 60$^\circ$N) and Southern Hemisphere ($\left< \EKE\right>_{SH}$  and $\left< \CEKE\right>_{SH}$; 60$^\circ$S - 10$^\circ$S). 
+	In both hemispheres, the $\left<\EKE\right>$ and $\left<\CEKE\right>$ peak during summer. In the Northern Hemisphere, the largest $\left<\EKE\right>_{NH}$ and $\left<\CEKE\right>_{NH}$ occurs in July, $\sim$6 months after the maximum winds in January (purple bar and back star in Figure \ref{fig:eddy_energy_polar}c and d). Meanwhile, the Southern Ocean 
+	$\left<\EKE\right>_{SH}$ and $\left<\CEKE\right>_{SH}$ seasonal maxima arises during December, $\sim$4 months after the maximum winds in August (purple bar and back star in Figure \ref{fig:eddy_energy_polar}g, and h). This lag between winds and the eddy and coherent eddy energy components is further discussed in section \ref{sec:CE_stats}.
 
-	The cyclic plots in Figure \ref{fig:eddy_energy_polar} show the temporal evolution of $\EKE$ and $\CEKE$. 
-	Note that high frequency variability can be observed in the $\CEKE$ field with temporal scales of a few months, this could be attributed local dynamics averaged over the hemisphere, as well as errors within the coherent eddy reconstruction. 
+	The cyclic plots in Figure \ref{fig:eddy_energy_polar} show the temporal evolution of $\left<\EKE\right>$ and $\left<\CEKE\right>$. 
+	Note that high frequency variability can be observed in the $\left<\CEKE\right>$ field with temporal scales of a few months, this could be attributed local dynamics averaged over the hemisphere, as well as errors within the coherent eddy reconstruction. 
 	% This signature will be further explored in section \ref{sec:CE_regional_stats}.
-	Additionally, cyclic plots highlight long-term temporal changes over the record; (i) Northern Hemisphere winters show a decrease in the $\CEKE$ field and (ii) the Southern Hemisphere show concentric growth over time in $\EKE$ and $\CEKE$, which support the increasing trends in the Southern Ocean observed by \citet{Hogg_Recent_2015}, \citet{Martinez_TKE_2019}, and \citet{Martinez_Kinetic_2021}. 
+	Additionally, concentric changes in the cyclic plots highlight long-term changes over the record. For example, the Northern Hemisphere winters in early years of the record (blue) had a more energetic coherent eddy field, which has transitioned to weaker coherent energy contents since 2010 (red), in other words, the intensity of the $\left<\CEKE\right>_{NH}$ field has decreased. A larger long-term change can be observed in the Southern Hemisphere, where concentric growth over time in $\left<\EKE\right>_{SH}$ and $\left<\CEKE\right>_{SH}$ support the previously observed strengthening of the eddy field in the Southern Ocean \citep{Hogg_Recent_2015,Martinez_TKE_2019,Martinez_Kinetic_2021}. 
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=95mm]{figures/All_polar_plots.pdf}
-	    \caption{Seasonality of eddy kinetic energy ($\EKE$), coherent eddy kinetic energy ($\CEKE$). 
-		Panels a and b show the time-series of the Northern Hemisphere, while panels e and f correspond to the Southern Hemisphere. Panels c and d show the seasonal cycle of the $\EKE$ and $\CEKE$ in the Northern Hemisphere, and panels g and h show the Southern Hemisphere.
+	    \caption{Seasonality of the area weighted eddy kinetic energy ($\left<\EKE\right>$), coherent eddy kinetic energy ($\left<\CEKE\right>$). 
+		Panels a and b show the time-series of the Northern Hemisphere, while panels e and f correspond to the Southern Hemisphere. Panels c and d show the seasonal cycle of the $\left<\EKE\right>_{NH}$ and $\left<\CEKE\right>_{NH}$ in the Northern Hemisphere, and panels g and h show the Southern Hemisphere ($\left<\EKE\right>_{SH}$ and $\left<\CEKE\right>_{SH}$).
 		Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). 
 		The black and magenta markers (circle and bar) show the maximum of the seasonal cycle for the kinetic energy components and the wind magnitude, respectively. In cyclic plots, line colors shows the year.}
 	    \label{fig:eddy_energy_polar}
@@ -230,11 +239,11 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		% \item Absolute eddy amplitude has the similar signature as CEKE.
 	% \end{itemize}
 
-	Automated coherent eddy identification algorithms allow us to estimate the contribution and temporal changes of eddy properties, in particular, their abundance (the number of eddies) and their intensity (both their amplitude and diameter). 
+	Coherent eddy kinetic energy allows us to quantify and study the energy of the eddy field, but the coherent eddy properties computed by automated coherent eddy identification algorithms allow us investigate in more detail the contribution and temporal changes of their abundance (the number of eddies) and their intensity (both their amplitude and diameter). 
 	Figure \ref{fig:eddy_stats_climatology} shows gridded climatologies of the number of eddies and the eddy amplitude. 
-	We contrast M-M eddy count with \citet{Chelton_Global_2007} (Figure \ref{fig:eddy_stats_climatology}a-b). Although the number of the identified eddies is larger in M-M, possibly due to the lifespan filter implemented by Chelton, both datasets reveal consistent spatial patterns. 
+	We contrast our M-M eddy count with \citet{Chelton_Global_2007} (Figure \ref{fig:eddy_stats_climatology}a-b). Although the number of the identified eddies is larger in M-M, possibly due to the lifespan filter implemented by Chelton, both datasets reveal consistent spatial patterns. 
 	For example, both datasets show high abundance of eddies in the East North Pacific, East North Atlantic, as well as the East South Pacific, East South Atlantic and East Indian Ocean, and small number counts of eddies in the tropics and in high latitudes ($\sim$60$^\circ$). 
-	An interesting pattern also emerges in both eddy count datasets, where clusters with larger eddy counts are favored across the ocean. In addition, to preferential coherent eddy paths observable in boundary extensions and regions in the Southern Ocean. 
+	An interesting pattern also emerges in both eddy count datasets, where small scale structures with larger eddy counts are favored across the ocean. In addition, to preferential coherent eddy paths observable in boundary extensions and regions in the Southern Ocean. 
 	These clusters and paths of coherent eddies could be associated with topographic features, however they remain a puzzling consistency between the eddy count pattern using these two eddy identification methods.
 	
 	\begin{figure}
@@ -246,7 +255,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	
 	Regions with large counts of eddies have in general small absolute amplitudes (Figure \ref{fig:eddy_stats_climatology} c), ocean gyre interiors follow with a larger absolute amplitude and finally regions such as the boundary extensions and Antarctic Circumpolar Current have the largest coherent eddy absolute amplitudes as shown by \citet{Chelton_The_2011}.
 	Eddy amplitude highlights regions dominated by a given coherent eddy polarity, for example, boundary extensions have a preferred sign (Figure \ref{fig:eddy_stats_climatology} d); positive amplitude polewards of the boundary extension mean location, and negative amplitude equatorwards. 
-	This sign preference is consistent with the way coherent eddies are shed from boundary extensions \citep{Kang_eddy_characteristics_2013,Chelton_The_2011,Chelton_Global_2007}. 
+	This sign preference is consistent with the preferential way coherent eddies are shed from boundary extensions; warm core eddies (positive)  polewards of the boundary current extension, and equatorward for cold core eddies (negative) \citep{Kang_eddy_characteristics_2013,Chelton_The_2011,Chelton_Global_2007}. 
 	These global statistics reveal the absolute coherent eddy amplitude is a proxy of the $\CEKE$ with similar spatial patterns (Figure \ref{fig:eddy_climatology} \& Figure \ref{fig:eddy_stats_climatology} c) and showcases that regions where $\MCEKE$ has a large proportion of $\MEKE$ (Figure \ref{fig:eddy_ratio}), the absolute coherent eddy amplitude is also large.
 
 	% \subsection{Seasonality}
@@ -262,13 +271,14 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	% \end{itemize}
 
 
-	To further understand the seasonal cycle of $\CEKE$, we compute the climatology of coherent eddy properties in each hemisphere (Figure \ref{fig:eddy_stats}). 
+	To further understand the seasonal cycle of $\left<\CEKE\right>$, we compute the climatology of coherent eddy properties in each hemisphere (Figure \ref{fig:eddy_stats}). 
 	The seasonality of the number of eddies in the Northern Hemisphere peaks on April (Figure \ref{fig:eddy_stats}~a, c), while the Southern Hemisphere maximum number of eddies occurs during October (Figure \ref{fig:eddy_stats}~e, g). 
-	Meanwhile, the seasonality of the absolute eddy amplitude peaks in August and January for the Northern and Southern Hemispheres respectively (Figure \ref{fig:eddy_stats}~b, d, f, and h). 
-	As expected, the seasonality of the absolute eddy amplitude, or intensity of the coherent eddies, is consistent with the seasonal cycle of $\CEKE$. 
+	Meanwhile, the seasonality of the polarity independent eddy amplitude ($\left<|\cEddy_{amp}|\right>$) peaks in August and January for the Northern and Southern Hemispheres respectively (Figure \ref{fig:eddy_stats}~b, d, f, and h). 
+	As expected, the seasonality of $\left<|\cEddy_{amp}|\right>$xw, or equivalent to the intensity of the coherent eddies, is consistent with the seasonal cycle of $\left<\CEKE\right>$. 
 	Furthermore, a distinct lag of $\sim$3 months is observed between the winds and eddy count, while the eddy amplitude maximum occurs $\sim$6 months after the seasonal maxima in winds. 
-	This lag suggest the eddy number increases earlier in the year and through eddy-eddy interactions (merging of coherent eddies) the amplitude of the coherent eddy increases. 
-	This result can be further explored by looking at the seasonal evolution of the eddy diameter. Note that 90\% of identified coherent eddies have diameters between 50 to 220 km (Figure \ref{fig:eddy_diameter}~a). We divided eddies into large-scale coherent eddies (diameter $>$ 120 km) and  small-scale coherent eddies (diameter $<$ 120 km; Figure \ref{fig:eddy_diameter}a). In the Northern Hemisphere, small eddies have a seasonal peak in \textbf{XXX} diameter during May, while large eddies have the greatest diameter in September (Figure \ref{fig:eddy_diameter}~b).
+	We observe the eddy number increases earlier in the year and through eddy-eddy interactions (merging of coherent eddies) the amplitude of the coherent eddy increases $\sim$3 months after. This seasonal lag and summer maxima is consistent with Figure \ref{fig:eddy_stats_climatology}, furthermore, previous studies suggest that a time-lag of the inverse cascade \citep{Sasaki_seasonal_2014, Qiu_seasonal_2014} is responsible of the $\EKE$ seasonal cycle, where winter has the highest energy at the smallest scales (non-resolvable with satellite observations), spring and autumn have the highest and lowest energy in scales of 50-100 km, and summertime has the highest energy at the largest scales ($>$ 100 km; \citealt{Uchida_Seasonality_2017}). 
+	Thus, the maximum of $\left<\EKE\right>$, $\left<\CEKE\right>$, and $\left<|\cEddy_{amp}|\right>$ located during summertime suggest that the seasonality of eddies and coherent eddies could be dominated by scales larger than 100 km.
+	This result can be further explored by looking at the seasonal evolution of the eddy diameter ($\cEddy_d$). Note that 90\% of identified coherent eddies have diameters between 50 to 220 km (Figure \ref{fig:eddy_diameter}~a). We divided eddies into large-scale coherent eddies (diameter $>$ 120 km) and  small-scale coherent eddies (diameter $<$ 120 km; Figure \ref{fig:eddy_diameter}a). In the Northern Hemisphere, small eddies have a seasonal peak in diameter during May, while large eddies have the greatest diameter in September (Figure \ref{fig:eddy_diameter}~b).
 	Meanwhile, in the Southern Hemisphere, the small-scale coherent eddies have the maximum diameter in December, while large-scale coherent eddies peak in 
 	February (Figure \ref{fig:eddy_diameter}~c). This result suggests that wind driven baroclinic instabilities generate small coherent eddies early in the season, which then merge and grow to become larger in diameter and amplitude, and thus, more energetic. This process is associated with the inverse energy cascade, and suggest that this mechanism not only drives the $\EKE$ seasonality, but also may be responsible of the seasonal cycle of coherent eddies. 
 
@@ -278,11 +288,19 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	%Furthermore, by analogy we extend the argument that a long-term decrease in the number of coherent eddies and increase in coherent eddy amplitude could be a consequence of a long-term increase in the energy cascade, where interactions between eddies may become more frequent and result in stronger coherent eddies. 
 	%This hypothesis may also occur in conjunction with other processes, such as baroclinic and barotropic instabilities generating stronger eddies. 
 
+	Seasonality of the area weighted eddy kinetic energy ($\left<\EKE\right>$), coherent eddy kinetic energy ($\left<\CEKE\right>$). 
+	Panels a and b show the time-series of the Northern Hemisphere, while panels e and f correspond to the Southern Hemisphere. Panels c and d show the seasonal cycle of the $\left<\EKE\right>_{NH}$ and $\left<\CEKE\right>_{NH}$ in the Northern Hemisphere, and panels g and h show the Southern Hemisphere ($\left<\EKE\right>_{SH}$ and $\left<\CEKE\right>_{SH}$).
+	Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). 
+	The black and magenta markers (circle and bar) show the maximum of the seasonal cycle for the kinetic energy components and the wind magnitude, respectively. In cyclic plots, line colors shows the year.
+
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=95mm]{figures/All_polar_plots_eddy_stats_polarity_V3.pdf}
-	    \caption{Hemispherical seasonality of the coherent eddy statistics;
-		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) seasonal cycle of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal cycle of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal cycle of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a,b and c show the Northern Hemisphere seasonal cycle, while panels d,e, and f correspond to the Southern Hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
+	    \caption{
+		Seasonality of the count of number of eddies ($\cEddy
+		_n$) and area weighted polarity independent coherent eddy amplitude ($\left<\cEddy_{amp}\right>$); Panels a and b show the time-series of the Northern Hemisphere, while panels e and f correspond to the Southern Hemisphere. Panels c and d show the seasonal cycle of the $\cEddy_n$ and $\left<|\cEddy|_{amp}\right>_{NH}$ in the Northern Hemisphere, and panels g and h show the Southern Hemisphere ($\cEddy_n$ and $\left<|\cEddy|_{amp}\right>_{SH}$).
+		Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). 
+		The black and magenta markers (circle and bar) show the maximum of the seasonal cycle for the eddy property  and the wind magnitude, respectively. In cyclic plots, line colors shows the year.}
 	    \label{fig:eddy_stats}
 	\end{figure}
 
@@ -293,20 +311,19 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	    \label{fig:eddy_diameter}
 	\end{figure}
 
-	The coherent eddy amplitude from positive coherent eddies and negative coherent eddies show similar seasonal cycles to the absolute eddy amplitude (Figure \ref{fig:eddy_stats_polar}).
-	However, by separating the polarity contribution, its observed that the amplitude of negative coherent eddies in the Northern Hemisphere has decreased (Figure \ref{fig:eddy_stats_polar}b). 
-	In the Southern Ocean, the increase in absolute eddy amplitude is further corroborated as both coherent eddy polarities show an increase since the early 90s (Figure \ref{fig:eddy_stats_polar}e,f).
-
+	The coherent eddy amplitude from positive coherent eddies and negative coherent eddies show similar seasonal cycles to the absolute eddy amplitude.
+	The Northern Hemisphere decrease in absolute eddy amplitude is driven by a decrease of the amplitude of negative coherent eddies in the Northern Hemisphere. 
+	Meanwhile in the Southern Ocean, the increase in absolute eddy amplitude is corroborated by an strengthening of both coherent eddy polarities since the early 90s.
 
 	% Should I add a seasonal cycle of the eddy radius? eddy area?, I've plotted it follows closely the eddy amplitude, which is expected, but as I just argued, the mean seasonal cycle shows on average a peak in summertime with diameters of 90 km, in fact, if I mask the radius with eddies larger than 90km, the seasonal cycle peaks in October, while eddies smaller than 90km peak on May. 
 
-	\begin{figure}
-	    \centering
-	    \includegraphics[width=95mm]{figures/All_polar_plots_eddy_stats_polarity_V4.pdf}
-	    \caption{Hemispherical seasonality of the coherent eddy statistics;
-		a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) time-series of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal climatology of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal climatology of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a, b, c, and d correspond to the Northern Hemisphere, while panels e, f, g, and h correspond to the Southern Hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
-	    \label{fig:eddy_stats_polar}
-	\end{figure}
+	% \begin{figure}
+	%     \centering
+	%     \includegraphics[width=95mm]{figures/All_polar_plots_eddy_stats_polarity_V4.pdf}
+	%     \caption{Hemispherical seasonality of the coherent eddy statistics;
+	% 	a,e) seasonal cycle of the number of coherent eddies ($\cEddy_n$); b,f) time-series of the mean coherent eddy amplitude ($\cEddy_{amp}$); c,g) seasonal climatology of the warm core coherent eddies amplitude (positive $\cEddy_{amp}$); d,h) seasonal climatology of the cold core coherent eddies amplitude (negative $\cEddy_{amp}$). Panels a, b, c, and d correspond to the Northern Hemisphere, while panels e, f, g, and h correspond to the Southern Hemisphere. Dashed lines correspond to the seasonal cycle of the fields and dotted lines show the seasonal cycle of the wind magnitude smoothed over 120 days (moving average). The green and magenta stars show the maximum of the seasonal cycle for each field and the wind magnitude, respectively. The line colors show the year.}
+	%     \label{fig:eddy_stats_polar}
+	% \end{figure}
 
 	\section{Trends}
 	\label{sec:CE_trends}	
@@ -320,25 +337,23 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 		% \item This increase is consistent with \citet{Martinez_Kinetic_2021}
 	% \end{itemize}
 
-	The results presented in Figures \ref{fig:eddy_energy_polar}, \ref{fig:eddy_stats}, and  \ref{fig:eddy_stats_polar} suggest a long-term readjustment of the coherent eddy field. 
+	The results presented in Figures \ref{fig:eddy_energy_polar} and \ref{fig:eddy_stats} suggest a long-term readjustment of the coherent eddy field. 
 	The long-term trends of the number of coherent eddies, absolute coherent eddy amplitude, and coherent eddy amplitude polarities are explored in Figure \ref{fig:eddy_stats_trends}. 
 	Chelton's and M-M datasets show consistent spatial patterns in the trends and significance of the number of coherent eddies and the absolute coherent eddy amplitude. 
 	Several regions in the ocean, such as the Southern Ocean, North Atlantic and North Pacific, show a decrease in the number of eddies. Those same regions also have a clear increase in the absolute coherent eddy amplitude. 
 	%This collocation of decrease in number and increase in eddy amplitude provides more evidence of a possible intensification of the coherent eddy field though eddy-eddy interactions. 
 	These trends are similar to those observed in mesoscale eddy kinetic energy \citep{Martinez_Kinetic_2021} and provide additional evidence of a readjustment of the mesoscale eddy field over the last 3 decades. 
 	
-	in several regions in the ocean are experiencing 
+	\textcolor{purple}{\textbf{@Matt:}\textit{What do you think? Is it important to highlight the trends we observe are different to sea level rise? Or is the next paragraph irrelevant?}}
 
-	The observed trends of $|\cEddy_{amp}|$ in several oceanic regions have the same scale as sea level rise ($\sim$3cm per decade) by analyzing the positive and negative coherent eddy amplitude we can discard the observed trends correspond to an increase in sea level. 
+	The observed trends of $\cEddy_{|amp|}$ in several oceanic regions have the same scale as sea level rise ($\sim$3cm per decade) by analyzing the positive and negative coherent eddy amplitude we can discard the observed trends correspond to an increase in sea level. 
 	In fact, each coherent eddy polarity has intensified in the Southern Ocean and North East Pacific and Atlantic. 
-	In other words, the absolute amplitude of each polarity has increased over time, thus this strengthening is an intrinsic response of the coherent eddy field. Note that the negative coherent eddy amplitude dominates the global $|\cEddy_{amp}|$ trends (Figure \ref{fig:eddy_stats_trends}e, f). However, different trend pattern can be observed in both positive and negative coherent eddy amplitudes in the north Atlantic and north Pacific, where the negative coherent eddy amplitude in the  Western Boundary Currents appears to decrease and is consistent with Figure \ref{fig:eddy_stats_polar}.
+	In other words, the amplitude of each polarity has increased over time, thus this strengthening is an intrinsic response of the coherent eddy field. Note that the negative coherent eddy amplitude dominates the global $|\cEddy_{amp}|$ trends (Figure \ref{fig:eddy_stats_trends}e, f). However, different trend pattern can be observed in both positive and negative coherent eddy amplitudes in the north Atlantic and north Pacific, where the negative coherent eddy amplitude in the  Western Boundary Currents appears to decrease.
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/all_trackeddy_trends_all.pdf}
-	    \caption{Trends of coherent eddy statistics. a) and b) Trends of the number of identified coherent eddies from satellite observations identified using TrackEddy, and those reported in Chelton's dataset. c) and d) Trends of the mean absolute value of identified coherent eddies amplitude from satellite observations identified using TrackEddy, and those reported in Chelton's dataset. e) and f) Trends of eddy amplitude polarity using TrackEddy. Gray stippling shows regions that are statistically significant above the 95\% confidence level.
-		\textbf{Change $\cEddy_{|amp|}$ to $|\cEddy_amp|$}
-		}
+	    \caption{Trends of coherent eddy statistics. a) and b) Trends of the number of identified coherent eddies from satellite observations identified using TrackEddy, and those reported in Chelton's dataset. c) and d) Trends of the absolute value of identified coherent eddies amplitude ($\cEddy_{|amp|}$) from satellite observations identified using TrackEddy, and those reported in Chelton's dataset. e) and f) Trends of eddy amplitude polarity using TrackEddy ($\cEddy_{amp}^+$ and $\cEddy_{amp}^-$). Gray stippling shows regions that are statistically significant above the 95\% confidence level.}
 	    \label{fig:eddy_stats_trends}
 	\end{figure}
 
@@ -362,39 +377,39 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	
 	The most energetic western boundary extensions include; the Gulf Stream, the Kuroshio Current, and the Agulhas Current (Figures \ref{fig:Gulf_Stream}, \ref{fig:Kuroshio}, and \ref{fig:Agulhas}). 
 	Coherent eddy generation in boundary extensions occurs through baroclinic and barotropic instabilities of the mean current, thus all these regions share similar generation dynamics. 
-	In all these regions without exception; (i) $\CEKE$ contains up to 80\% of the $\EKE$ in regions equatorwards from the mean western boundary extension location, (ii) the number of eddies is consistently minimal numbers of eddies over the mean western boundary extension location, and (iii) the absolute eddy amplitude is larger polewards of the mean western boundary extension location. 
+	In all these regions without exception; (i) $\CEKE$ contains up to 80\% of the $\EKE$ in regions equatorwards from the mean western boundary extension location, (ii) the number of eddies is consistently minimal numbers of eddies over the mean western boundary extension location, and (iii) the eddy amplitude is larger polewards of the mean western boundary extension location. 
 
-	In the Gulf Stream, the energy ratio between $\CEKE$ and $\EKE$ is $\sim$55\% (Figure \ref{fig:Gulf_Stream}). 
+	In the Gulf Stream, the energy ratio between $\CEKE$ and $\EKE$ is $\sim$56\% (Figure \ref{fig:Gulf_Stream}). 
 	The highest energy content occurs in regions with numerous eddies, and collocated with regions where the largest $|\cEddy_{amp}|$ gradients occurs. 
-	The time series of $\cEddy_{n}$ and $|\cEddy_{amp}|$ are anti-correlated (-0.52), and they display inter-annual and seasonal variability. 
-	Although \citet{Chaudhuri_Oscillation_2009} observed a positive phase of North Atlantic Oscillation (NAO) exhibit higher $\EKE$, due to an increase in baroclinic instabilities, thus suggesting more coherent eddies, we do not find a correlation between the $\cEddy_{n}$ or the $|\cEddy_{amp}|$ in the Gulf Stream and the NAO index. 
+	The time series of $\cEddy_{n}$ and $\left<|\cEddy_{amp}|\right>$ are anti-correlated (-0.52), and they display inter-annual and seasonal variability. 
+	Although \citet{Chaudhuri_Oscillation_2009} observed a positive phase of North Atlantic Oscillation (NAO) exhibit higher $\EKE$, due to an increase in baroclinic instabilities, thus suggesting more coherent eddies, we do not find a correlation between the $\cEddy_{n}$ or the $\left<|\cEddy_{amp}|\right>$ in the Gulf Stream and the NAO index. 
 	Similar to the signal observed in the hemispherical analysis, the eddy count seasonal cycle follows the wind maximum after $\sim$3 months, while the amplitude of the coherent eddies lags by $\sim$ 6 months. 
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_5.pdf}
-	    \caption{Climatology of the eddy field and coherent eddy field at the Gulf Stream. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Thick lines show the running average over 2 years and thin lines show the running average over 90 days of the coherent eddy number sum and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; e) Seasonal cycle of the number of eddies f) Seasonal cycle of the positive coherent eddy amplitude. g) Seasonal cycle of the negative coherent eddy amplitude. Contours in maps correspond to mean sea surface height (m).}
+	    \caption{Climatology of the eddy field and coherent eddy field at the Gulf Stream. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Thick lines show the running average over 2 years and thin lines show the running average over 90 days of the coherent eddy number sum and the average coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average coherent eddy amplitude; e) Seasonal cycle of the number of eddies f) Seasonal cycle of the positive coherent eddy amplitude. g) Seasonal cycle of the negative coherent eddy amplitude. Contours in maps correspond to mean sea surface height (m).}
 	    \label{fig:Gulf_Stream}
 	\end{figure}
 
-	The variability of the $\cEddy_{n}$ and $|\cEddy_{amp}|$ in the Kuroshio Current are weakly anti-correlated (-0.4; Figure \ref{fig:Kuroshio}). 
+	The variability of the $\cEddy_{n}$ and $\left<|\cEddy_{amp}|\right>$ in the Kuroshio Current are weakly anti-correlated (-0.41; Figure \ref{fig:Kuroshio}). 
 	However, on average 56\% of the energy in the region corresponds to $\CEKE$.
 	As observed in the Gulf Stream, there is an important seasonal cycle in the boundary extensions, where the eddy count seasonal cycle occurs on March after $\sim$3 months of the wind maximum (January). Meanwhile, the amplitude of the coherent eddies lags by $\sim$ 6 months (June) after the maximum wind. 
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_4.pdf}
-	    \caption{Climatology of the eddy field and coherent eddy field at the Kuroshio extension. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
+	    \caption{Climatology of the eddy field and coherent eddy field at the Kuroshio extension. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
 	    \label{fig:Kuroshio}
 	\end{figure}
 
-	In the Southern Hemisphere, the strongest boundary current, the Agulhas Current shows similar behavior to its counterparts in the Northern Hemisphere (Figure \ref{fig:Agulhas}). On average, coherent eddies in the Agulhas current contain $\sim$56\% of the energy, meanwhile the $\cEddy_{n}$ seasonal peak occurs in August, while the $|\cEddy_{amp}|$ occurs in January-February. 
+	In the Southern Hemisphere, the strongest boundary current, the Agulhas Current shows similar behavior to its counterparts in the Northern Hemisphere (Figure \ref{fig:Agulhas}). On average, coherent eddies in the Agulhas current contain $\sim$56\% of the energy, meanwhile the $\cEddy_{n}$ seasonal peak occurs in August, while the $\left<|\cEddy_{amp}|\right>$ occurs in January-February. 
 	The seasonal lag between the winds, eddy count, and eddy amplitude in each of the western boundary current extensions is interpreted as being analogous to the explanation observed in Figure \ref{fig:eddy_stats} of the lagged response of coherent eddy properties due to eddy-eddy interactions, consistent with the inverse cascade of energy.
 
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_2.pdf}
-	    \caption{Climatology of the eddy field and coherent eddy field at the Agulhas Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
+	    \caption{Climatology of the eddy field and coherent eddy field at the Agulhas Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
 	    \label{fig:Agulhas}
 	\end{figure}
 
@@ -402,7 +417,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	% \textbf{Say something about the Leeuwin Current}
 	Coherent eddies dominate the $\EKE$ field in other regions such as the Leeuwin Current (Figure \ref{fig:leeuwin_cycle}), where the 65\% of the energy is contained by coherent eddies. 
 	Although the Leeuwin region is not characterized by having a large $\EKE$, however, a considerable abundance of eddies and large eddy amplitudes are observable in the region. 
-	The series reveal a significant increase in the $|\cEddy_{amp}|$, while the $\cEddy_{n}$ has decreased over the last 3 decades \citep{}. The seasonal cycle shows that the $\cEddy_{n}$ peak occurs on August, 3 months after the maximum winds (June). Meanwhile, the $\cEddy_{amp}^+$ responds in synchrony to winds, and the $\cEddy_{amp}^-$ is in phase with the seasonal cycle of the $\cEddy_{n}$. 
+	The series reveal a significant increase in the $\left<|\cEddy_{amp}|\right>$, while the $\cEddy_{n}$ has decreased over the last 3 decades \citep{}\textcolor{purple}{\textbf{@Andy}, you suggested a reference here, I couldn't find it...}. The seasonal cycle shows that the $\cEddy_{n}$ peak occurs on August, 3 months after the maximum winds (June). Meanwhile, the $\left<\cEddy_{amp}^+\right>$ responds in synchrony to winds, and the $\left<\cEddy_{amp}^-\right>$ is in phase with the seasonal cycle of the $\cEddy_{n}$. 
  		
 	% \textbf{Figure 7}
 	% \begin{itemize}
@@ -417,16 +432,14 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_0.pdf}
-	    \caption{Climatology of the eddy field and coherent eddy field at the Leeuwin Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
+	    \caption{Climatology of the eddy field and coherent eddy field at the Leeuwin Current. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
 	    \label{fig:leeuwin_cycle}
 	\end{figure}
 
-	% \textbf{Say something about the East Tropical Pacific}
-
 	Another region with important contributions of the coherent eddy field is the East Tropical Pacific (Tehuantepec region; Figure \ref{fig:tehuantepec}), where coherent eddies contain $\sim$58\% of the energy. 
 	In fact, coherent eddy generation in this region is modulated by winds and coastlly trapped waves which produce a strong horizontal and vertical shear (baroclinic and barotropic instabilities; \citealp{Zamudio_Tehuantepec_2006}). 
-	Furthermore, the equatorial generated waves propagating along the coast have an important interannual variability observable in the $|\cEddy_{amp}|$ time-series, where El Niño events are notable during 1997 and 2015 (Figure \ref{fig:tehuantepec}b). 
-	The seasonal cycle of $\cEddy_{n}$, $\cEddy_{amp}^+$, and $\cEddy_{amp}^-$ support the idea of a coherent eddies responding to two different coherent eddy generation mechanisms; the number of eddies seasonal cycle lags for by $\sim$3 months from the winds, while the $\cEddy_{amp}^+$ is on phase with the winds and the maximum of trapped waves (winter; \citealp{Zamudio_Tehuantepec_2006}), and the $\cEddy_{amp}^-$ could be a consequence of eddy-eddy interactions. 
+	Furthermore, the equatorial generated waves propagating along the coast have an important interannual variability observable in the $\left<|\cEddy_{amp}|\right>$ time-series, where El Niño events are notable during 1997 and 2015 (Figure \ref{fig:tehuantepec}b). 
+	The seasonal cycle of $\cEddy_{n}$, $\left<\cEddy_{amp}^+\right>$, and $\left<\cEddy_{amp}^-\right>$ support the idea of a coherent eddies responding to two different coherent eddy generation mechanisms; the number of eddies seasonal cycle lags for by $\sim$3 months from the winds, while the $\left<\cEddy_{amp}^+\right>$ is on phase with the winds and the maximum of trapped waves (winter; \citealp{Zamudio_Tehuantepec_2006}), and the $\left<\cEddy_{amp}^-\right>$ could be a consequence of eddy-eddy interactions. 
 
 	% \textbf{Figure 9}
 	% \begin{itemize}
@@ -439,7 +452,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=1\textwidth]{figures/regional_ratios_and_stats_V3_3.pdf}
-	    \caption{Climatology of the eddy field and coherent eddy field at the East Tropical Pacific. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average absolute coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average absolute coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
+	    \caption{Climatology of the eddy field and coherent eddy field at the East Tropical Pacific. a) Ratio of mean coherent eddy kinetic energy ($\MCEKE$) versus mean eddy kinetic energy ($\MEKE$); b) Time-series of the coherent eddy number and the average coherent eddy amplitude; c) Map of the number of eddies; d) Map of the average coherent eddy amplitude; Seasonal cycle of the e) number of eddies, f) positive coherent eddy amplitude, and g) negative coherent eddy amplitude. Different lines represent the same as in Figure \ref{fig:Gulf_Stream}.}
 	    \label{fig:tehuantepec}
 	\end{figure}	
 	
@@ -453,25 +466,25 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	% Ratio:  <xarray.DataArray ()>
 	% array(0.56109798)
 	% Corr:  [[ 1.         -0.27384291]
-	%  [-0.27384291  1.        ]]
+	%  [-0.29384291  1.        ]]
 
 	% Tehuantepec
 	% Ratio:  <xarray.DataArray ()>
 	% array(0.58121928)
 	% Corr:  [[ 1.         -0.46396017]
-	% [-0.46396017  1.        ]]
+	% [-0.47396017  1.        ]]
 
 	% Kuroshio
 	% Ratio:  <xarray.DataArray ()>
 	% array(0.56292827)
 	% Corr:  [[ 1.         -0.40192595]
-	%  [-0.40192595  1.        ]]
+	%  [-0.41192595  1.        ]]
 
 	% Gulf stream
 	% Ratio:  <xarray.DataArray ()>
 	% array(0.55436168)
 	% Corr:  [[ 1.         -0.52168401]
-	% [-0.52168401  1.        ]]
+	% [-0.51168401  1.        ]]
 
 
 
@@ -532,7 +545,7 @@ Finally, section \ref{sec:Conclusions} summarizes the main results and discusses
 	
 	Coherent eddy properties showcase a non-uniform long-term readjustment of the mesoscale eddy field. 
 	Overall, the eddy number has decreased globally at a significant rate of $\sim$35 eddies per decade from $\sim$4000 eddies identified globally on average each day. 
-	However, large proportions of the ocean show an strengthening of the mesoscale coherent eddy field at a rate greater than $\sim$1 cm per decade. \textbf{Positive trends average 1cm per decade, negative trends average -0.7cm per decade. Global average ~ 0.2cm per decade}
+	However, large proportions of the ocean show an strengthening of the mesoscale coherent eddy field at a rate greater than $\sim$1 cm per decade.
 	This strengthening of the coherent eddy amplitude is attributed to an intensification of each coherent eddy polarity, rather than a readjustment of the coherent eddy field to sea level rise. 
 	In other words, the coherent eddy amplitude intensification is occurring in both coherent eddy polarities and explain a proportion of the previously observed readjustments in the eddy field to long-term changes in the ocean forcing \citep{Hu_acceleration_2020,Wunsch_speeding_2020,Martinez_Kinetic_2021}. 
 	This long-term readjustment showcases an intensification of the coherent eddy field, possibly due to long-term readjustments in the ocean baroclinic and barotropic instabilities, as well as the strength of the winds.
