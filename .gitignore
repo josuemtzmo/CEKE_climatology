@@ -1,6 +1,7 @@
-trackchanges-0.7.0/*
+Trackchanges-0.7.0/*
 trackchanges*
 *.DS_store
+dask-wo*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
