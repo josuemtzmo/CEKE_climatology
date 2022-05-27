@@ -2,6 +2,9 @@ Trackchanges-0.7.0/*
 trackchanges*
 *.DS_store
 dask-wo*
+*.nc
+datasets/*ipynb
+figures/pdf*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
